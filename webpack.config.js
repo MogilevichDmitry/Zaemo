@@ -2,10 +2,14 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval-source-map',
-  entry:  __dirname + "/src/index.js",
+  entry:  __dirname + "/src/index.jsx",
   output: {
     path: __dirname + "/dist",
     filename: "bundle.js"
+  },
+
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   },
 
   module: {
