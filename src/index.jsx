@@ -6,6 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
+import HomeFilter from './components/HomeFilter.jsx';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Ubuntu, san-serif',
@@ -30,7 +31,7 @@ ReactDOM.render(
   <MuiThemeProvider
     muiTheme={muiTheme}
   >
-    <Login />
+    <HomeFilter />
   </MuiThemeProvider>,
   document.getElementById('app')
 );
