@@ -20,31 +20,33 @@ function Login() {
       </div>
     </div>
 
-    <Tabs style={{flex:'1'}}>
+    <Tabs style={styles.tabs}>
       <Tab label="Log in">
         <div style={styles.signIn}>
-          <div>
+          <div style={styles.field}>
             <Person style={styles.fieldIcon} />
             <TextField
+              style={styles.fieldInput}
               hintText="User name"
               hintStyle={styles.fieldHint}
             />
           </div>
-          <div>
+          <div style={styles.field}>
             <Lock style={styles.fieldIcon} />
             <TextField
+              style={styles.fieldInput}
               hintText="Password"
               hintStyle={styles.fieldHint}
             />
           </div>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-          }}>
-            <FlatButton label="forgot password?" primary={true} style={styles.signInBtn} />
-            <RaisedButton label="login" primary={true} style={styles.signInBtn} />
-            <FlatButton label="skip" primary={true} style={styles.signInBtn} />
+          <div style={styles.signInButtons}>
+            <FlatButton
+              label="forgot password?"
+              primary={true}
+              style={styles.firstButton}
+            />
+            <RaisedButton label="login" primary={true} style={styles.signInButton} />
+            <FlatButton label="skip" primary={true} style={styles.signInButton} />
           </div>
         </div>
       </Tab>
@@ -65,7 +67,7 @@ const styles = {
   },
   logoWrapper: {
     display: 'flex',
-    flex: '0.75',
+    flex: '0.8',
   },
   logo: {
     display: 'flex',
@@ -74,28 +76,51 @@ const styles = {
   logoIcon: {
     display: 'flex',
     margin: 'auto',
+    width: '36px',
+    height: '36px',
+    marginRight: '3.8%',
     color: '#4877f9',
   },
   logoName: {
     display: 'flex',
     color: 'white',
-    fontSize: '46px',
+    fontSize: '40px',
+    fontFamily: 'Ubuntu',
   },
-  signIn: {
+  tabs: {
+    display: 'flex',
+    flex: '1.2',
+    flexDirection: 'column',
+    padding: '0 4% 0',
+  },
+  signInButtons: {
     display: 'flex',
     flexDirection: 'column',
+    flex: '1',
+    justifyContent: 'space-between',
   },
-  signInBtn: {
+  signInButton: {
     width: '75%',
-    margin: '0 auto',
+    margin: '0 auto 3%',
+  },
+  firstButton: {
+    width: '75%',
+    margin: '0 auto 5%',
+  },
+  field: {
+    display: 'flex',
+    marginTop: '7%',
   },
   fieldIcon: {
     color: '#4877f9',
+    margin: 'auto 9% auto 0',
+  },
+  fieldInput: {
+    width: '100%',
   },
   fieldHint: {
     color: '#c2c3c3',
   },
 };
 
-Login = Radium(Login);
-export default Login;
+export default Login = Radium(Login);
