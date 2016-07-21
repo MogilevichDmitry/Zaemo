@@ -26,17 +26,20 @@ function Login() {
           <div style={styles.field}>
             <Person style={styles.fieldIcon} />
             <TextField
-              style={styles.fieldInput}
               hintText="User name"
+              fullWidth={true}
               hintStyle={styles.fieldHint}
+              inputStyle={styles.fieldInput}
             />
           </div>
           <div style={styles.field}>
             <Lock style={styles.fieldIcon} />
             <TextField
-              style={styles.fieldInput}
+              type="password"
               hintText="Password"
+              fullWidth={true}
               hintStyle={styles.fieldHint}
+              inputStyle={styles.fieldInput}
             />
           </div>
           <div style={styles.signInButtons}>
@@ -45,8 +48,16 @@ function Login() {
               primary={true}
               style={styles.firstButton}
             />
-            <RaisedButton label="login" primary={true} style={styles.signInButton} />
-            <FlatButton label="skip" primary={true} style={styles.signInButton} />
+            <RaisedButton
+              label="login"
+              primary={true}
+              style={styles.signInButton}
+            />
+            <FlatButton
+              label="skip"
+              primary={true}
+              style={styles.signInButton}
+            />
           </div>
         </div>
       </Tab>
@@ -116,7 +127,7 @@ const styles = {
     margin: 'auto 9% auto 0',
   },
   fieldInput: {
-    width: '100%',
+    color: 'white',
   },
   fieldHint: {
     color: '#c2c3c3',
