@@ -60,66 +60,26 @@ function HomeFilter() {
           <Tab label="Activities">
             <div>
               <di>
-                <Checkbox
-                  label="Gym"
-                />
-                <Checkbox
-                  label="Swimming"
-                />
-                <Checkbox
-                  label="Yoga"
-                />
-                <Checkbox
-                  label="Spinning"
-                />
-                <Checkbox
-                  label="Kickboxing"
-                />
-                <Checkbox
-                  label="Boot Camp"
-                />
-                <Checkbox
-                  label="Dancing"
-                />
-                <Checkbox
-                  label="Pilates"
-                />
-                <Checkbox
-                  label="Fencing"
-                />
-                <Checkbox
-                  label="Squash"
-                />
-                <Checkbox
-                  label="Zumba"
-                />
-                <Checkbox
-                  label="Physiotherapy"
-                />
-                <Checkbox
-                  label="Barre"
-                />
-                <Checkbox
-                  label="Rock Climbng"
-                />
-                <Checkbox
-                  label="Tennis"
-                />
-                <Checkbox
-                  label="Personal Training"
-                />
-                <Checkbox
-                  label="Cycling"
-                />
-                <Checkbox
-                  label="Martial Arts"
-                />
-                <Checkbox
-                  label="Basketball"
-                />
-                <Checkbox
-                  label="Soccer"
-                />
+                <Checkbox label="Gym" />
+                <Checkbox label="Swimming" />
+                <Checkbox label="Yoga" />
+                <Checkbox label="Spinning" />
+                <Checkbox label="Kickboxing" />
+                <Checkbox label="Boot Camp" />
+                <Checkbox label="Dancing" />
+                <Checkbox label="Pilates" />
+                <Checkbox label="Fencing" />
+                <Checkbox label="Squash" />
+                <Checkbox label="Zumba" />
+                <Checkbox label="Physiotherapy" />
+                <Checkbox label="Barre" />
+                <Checkbox label="Rock Climbng" />
+                <Checkbox label="Tennis" />
+                <Checkbox label="Personal Training" />
+                <Checkbox label="Cycling" />
+                <Checkbox label="Martial Arts" />
+                <Checkbox label="Basketball" />
+                <Checkbox label="Soccer" />
               </di>
               <div>
                 <FlatButton label="Clear All" primary={true} />
