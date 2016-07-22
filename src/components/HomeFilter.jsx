@@ -9,57 +9,70 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Checkbox from 'material-ui/Checkbox';
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 
 function HomeFilter() {
-  return  <div>
+  return <div>
     <AppBar
       title={"Filter gyms"}
       iconElementLeft={<IconButton><NavigationClose /></IconButton>}
       iconElementRight={<FlatButton label="Apply" />}
     />
-    
+
     <div style={styles.contentWrapper}>
-      <TextField
-        floatingLabelText="Gym name"
-        floatingLabelFixed={true}
-        fullWidth={true}
-      />
-
-      <SelectField
-        floatingLabelText="Search radius"
-        floatingLabelFixed={true}
-        hintText="8 miles"
-      >
-        <MenuItem primaryText="5 miles" />
-        <MenuItem primaryText="3 miles" />
-        <MenuItem primaryText="6 miles" />
-        <MenuItem primaryText="9 miles" />
-        <MenuItem primaryText="11 miles" />
-      </SelectField>
-
       <div>
-        <TextField
-          floatingLabelText="Zipcode"
-          floatingLabelFixed={true}
-        />
-        <SelectField
-          floatingLabelText="State"
-          floatingLabelFixed={true}
-          hintText="CA"
-        >
-          <MenuItem primaryText="CO" />
-          <MenuItem primaryText="FL" />
-          <MenuItem primaryText="HI" />
-          <MenuItem primaryText="WY" />
-          <MenuItem primaryText="ME" />
-        </SelectField>
+        <div>Price</div>
+
+        <RadioButtonGroup name="shipName" defaultSelected="not_checked">
+          <RadioButton label="Under $25" value="$25" />
+          <RadioButton label="$25 to $50" value="$25to$50" />
+          <RadioButton label="$50 to $100" value="$50to$100" />
+          <RadioButton label="$100 to $200" value="$100to$200" />
+          <RadioButton label="$200 & above" value="$200&above" />
+        </RadioButtonGroup>
       </div>
 
       <div>
-        <Tabs style={styles.tabs}>
+        <div>Area</div>
+
+        <div>
+          <SelectField
+            floatingLabelText="Search radius"
+            floatingLabelFixed={true}
+            hintText="8 miles"
+          >
+            <MenuItem primaryText="5 miles" />
+            <MenuItem primaryText="3 miles" />
+            <MenuItem primaryText="6 miles" />
+            <MenuItem primaryText="9 miles" />
+            <MenuItem primaryText="11 miles" />
+          </SelectField>
+        </div>
+
+        <div>
+          <TextField
+            floatingLabelText="Zipcode"
+            floatingLabelFixed={true}
+          />
+          <SelectField
+            floatingLabelText="State"
+            floatingLabelFixed={true}
+            hintText="CA"
+          >
+            <MenuItem primaryText="CO" />
+            <MenuItem primaryText="FL" />
+            <MenuItem primaryText="HI" />
+            <MenuItem primaryText="WY" />
+            <MenuItem primaryText="ME" />
+          </SelectField>
+        </div>
+      </div>
+
+      <div>
+        <Tabs>
           <Tab label="Activities">
             <div>
-              <di>
+              <div>
                 <Checkbox label="Gym" />
                 <Checkbox label="Swimming" />
                 <Checkbox label="Yoga" />
@@ -80,7 +93,7 @@ function HomeFilter() {
                 <Checkbox label="Martial Arts" />
                 <Checkbox label="Basketball" />
                 <Checkbox label="Soccer" />
-              </di>
+              </div>
               <div>
                 <FlatButton label="Clear All" primary={true} />
               </div>
@@ -90,7 +103,7 @@ function HomeFilter() {
         </Tabs>
       </div>
     </div>
-    
+
   </div>
 }
 
