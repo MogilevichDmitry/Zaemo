@@ -121,7 +121,6 @@ const styles = {
     fill: '#4877f9',
   },
   checkbox: {
-    borderColor: 'red',
     margin: '4% 0'
   },
   checkboxIcon: {
