@@ -28,7 +28,7 @@ ReactDOM.render(
   <MuiThemeProvider
     muiTheme={muiTheme}
   >
-    <RegisterStepTwo />
+    <Home />
   </MuiThemeProvider>,
   document.getElementById('app')
 );

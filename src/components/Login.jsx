@@ -9,7 +9,7 @@ import Logo from 'material-ui/svg-icons/editor/insert-photo';
 import Person from 'material-ui/svg-icons/social/person';
 import Lock from 'material-ui/svg-icons/action/lock';
 
-import background from '../images/loginBg.jpg';
+import background from '../images/layout/loginBg.jpg';
 
 function Login() {
   return <div style={styles.login}>
