@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {StyleRoot} from 'radium';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -23,7 +24,9 @@ ReactDOM.render(
   <MuiThemeProvider
     muiTheme={muiTheme}
   >
-    <Router history={browserHistory} routes={routes()} />
+    <StyleRoot>
+      <Router history={browserHistory} routes={routes()} />
+    </StyleRoot>
   </MuiThemeProvider>,
   document.getElementById('app')
 );
