@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-import Home from './components/Home.jsx';
-import Login from './components/Login.jsx';
-import RegisterStepOne from './components/Register/StepOne.jsx';
+import { Router, browserHistory } from 'react-router';
+import routes from './routes';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Ubuntu, san-serif',
@@ -22,12 +20,10 @@ const muiTheme = getMuiTheme({
 injectTapEventPlugin();
 
 ReactDOM.render(
-
   <MuiThemeProvider
     muiTheme={muiTheme}
   >
-    <RegisterStepOne />
+    <Router history={browserHistory} routes={routes()} />
   </MuiThemeProvider>,
   document.getElementById('app')
 );
-
