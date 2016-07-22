@@ -9,6 +9,8 @@ import Logo from 'material-ui/svg-icons/editor/insert-photo';
 import Person from 'material-ui/svg-icons/social/person';
 import Lock from 'material-ui/svg-icons/action/lock';
 
+import background from '../images/loginBg.jpg';
+
 function Login() {
   return <div style={styles.login}>
 
@@ -72,7 +74,7 @@ const styles = {
     height: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    backgroundImage: 'url(' + 'http://i.imgur.com/dWRkBkA.jpg' + ')',
+    backgroundImage: `url(${background})`,
     backgroundSize: 'cover',
   },
   logoWrapper: {

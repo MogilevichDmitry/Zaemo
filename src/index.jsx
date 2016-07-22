@@ -7,6 +7,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
 import RegisterStepOne from './components/Register/StepOne.jsx';
+import RegisterStepTwo from './components/Register/StepTwo.jsx';
+import RegisterStepThree from './components/Register/StepThree.jsx';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Ubuntu, san-serif',
@@ -26,7 +28,7 @@ ReactDOM.render(
   <MuiThemeProvider
     muiTheme={muiTheme}
   >
-    <RegisterStepOne />
+    <RegisterStepTwo />
   </MuiThemeProvider>,
   document.getElementById('app')
 );
