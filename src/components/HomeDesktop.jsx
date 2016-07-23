@@ -3,7 +3,6 @@ import Radium from 'radium';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Avatar from 'material-ui/Avatar';
-import ListItem from 'material-ui/List/ListItem';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import TextField from 'material-ui/TextField';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
@@ -17,169 +16,182 @@ import gymABC from '../images/content/gymABC.jpg';
 
 function HomeDesktop() {
   return <div>
-    <div>
-      <div>
-        <SelectField value={1}>
-          <MenuItem value={1} primaryText="Frank Hill" />
-          <MenuItem value={2} primaryText="Mark Zuckerberg" />
-          <MenuItem value={3} primaryText="Bill Gates" />
-        </SelectField>
+    <div style={styles.header}>
+      <div style={styles.headerTopBar}>
+        <div style={styles.main}>
+          {/* TODO add logo */}
+          <div style={styles.headerBar}>
+            <div style={{color: 'white'}}>logo</div>
+            <div>
+              <SelectField value={1}>
+                <MenuItem value={1} primaryText="Frank Hill" />
+                <MenuItem value={2} primaryText="Mark Zuckerberg" />
+                <MenuItem value={3} primaryText="Bill Gates" />
+              </SelectField>
 
-        <ListItem
-          disabled={true}
-          rightAvatar={
-            <Avatar src="https://pbs.twimg.com/profile_images/761883825/MarkSmilingTwitter.jpg" />
-          }
-        />
+              <Avatar src="https://pbs.twimg.com/profile_images/761883825/MarkSmilingTwitter.jpg" />
+
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <Tabs>
-          <Tab label="Browse"></Tab>
-          <Tab label="My Passes"></Tab>
-        </Tabs>
+      <div style={styles.headerBottomBar}>
+        <div style={styles.main}>
+          <div style={styles.headerBar}>
+            <Tabs style={{width: '28%'}}>
+              <Tab label="Browse"></Tab>
+              <Tab label="My Passes"></Tab>
+            </Tabs>
 
-        <TextField
-          floatingLabelText="Search"
-          floatingLabelFixed={true}
-        />
+            <div style={styles.headerBottomBarAside}>
+              <TextField
+                floatingLabelText="Search"
+                floatingLabelFixed={true}
+              />
 
-        <div>
-          <span>Sort by:</span>
-          <SelectField value={1}>
-            <MenuItem value={1} primaryText="Name: A-Z" />
-            <MenuItem value={2} primaryText="Name: Z-A" />
-            <MenuItem value={3} primaryText="Cost" />
-            <MenuItem value={4} primaryText="Distance" />
-          </SelectField>
+              <div>
+                <span>Sort by:</span>
+                <SelectField value={1}>
+                  <MenuItem value={1} primaryText="Name: A-Z" />
+                  <MenuItem value={2} primaryText="Name: Z-A" />
+                  <MenuItem value={3} primaryText="Cost" />
+                  <MenuItem value={4} primaryText="Distance" />
+                </SelectField>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  <div style={styles.contentWrapper}>
+      <div style={styles.main}>
+        <div style={styles.content}>
+          <div style={[styles.contentFilter, styles.boxShadow]}>
+            <div>
+              <h1>Filter By</h1>
 
-    <div>
-      <div>
-        <div>
-          <h1>Filter By</h1>
+              <SelectField
+                floatingLabelText="Search radius"
+                floatingLabelFixed={true}
+              >
+                <MenuItem primaryText="5 miles" />
+                <MenuItem primaryText="3 miles" />
+                <MenuItem primaryText="6 miles" />
+                <MenuItem primaryText="9 miles" />
+                <MenuItem primaryText="11 miles" />
+              </SelectField>
 
-          <SelectField
-            floatingLabelText="Search radius"
-            floatingLabelFixed={true}
-          >
-            <MenuItem primaryText="5 miles" />
-            <MenuItem primaryText="3 miles" />
-            <MenuItem primaryText="6 miles" />
-            <MenuItem primaryText="9 miles" />
-            <MenuItem primaryText="11 miles" />
-          </SelectField>
+              <TextField
+                floatingLabelText="Zipcode"
+                floatingLabelFixed={true}
+              />
 
-          <TextField
-            floatingLabelText="Zipcode"
-            floatingLabelFixed={true}
-          />
+              <SelectField
+                floatingLabelText="State"
+                floatingLabelFixed={true}
+              >
+                <MenuItem primaryText="CO" />
+                <MenuItem primaryText="FL" />
+                <MenuItem primaryText="HI" />
+                <MenuItem primaryText="WY" />
+                <MenuItem primaryText="CA" />
+              </SelectField>
+            </div>
 
-          <SelectField
-            floatingLabelText="State"
-            floatingLabelFixed={true}
-          >
-            <MenuItem primaryText="CO" />
-            <MenuItem primaryText="FL" />
-            <MenuItem primaryText="HI" />
-            <MenuItem primaryText="WY" />
-            <MenuItem primaryText="CA" />
-          </SelectField>
-        </div>
+            <div>
+              <h1>Price</h1>
 
-        <div>
-          <h1>Price</h1>
+              <RadioButtonGroup name="shipName" defaultSelected="not_checked">
+                <RadioButton label="Under $25" value="$25" />
+                <RadioButton label="$25 to $50" value="$25to$50" />
+                <RadioButton label="$50 to $100" value="$50to$100" />
+                <RadioButton label="$100 to $200" value="$100to$200" />
+                <RadioButton label="$200 & above" value="$200&above" />
+              </RadioButtonGroup>
+            </div>
 
-          <RadioButtonGroup name="shipName" defaultSelected="not_checked">
-            <RadioButton label="Under $25" value="$25" />
-            <RadioButton label="$25 to $50" value="$25to$50" />
-            <RadioButton label="$50 to $100" value="$50to$100" />
-            <RadioButton label="$100 to $200" value="$100to$200" />
-            <RadioButton label="$200 & above" value="$200&above" />
-          </RadioButtonGroup>
-        </div>
+            <div>
+              <h1>Activities</h1>
 
-        <div>
-          <h1>Activities</h1>
-
-          <Checkbox label="Gym" />
-          <Checkbox label="Swimming" />
-          <Checkbox label="Yoga" />
-          <Checkbox label="Spinning" />
-          <Checkbox label="Kickboxing" />
-        </div>
-      </div>
-
-      <div>
-        <div style={styles.map}></div>
-
-        <div>
-          <div style={styles.gym}>
-            <img src={gymA} style={styles.gymImage}/>
-            <div style={styles.gymInfoBox}>
-              <div style={styles.gymTitle}>Gym A</div>
-              <div style={styles.gymDescription}>
-                <div style={styles.gymInfo}>
-                  <div style={styles.partner}>
-                    <Logo style={styles.logo} />
-                    <span style={styles.partnerDescription}>Zaemo Partner</span>
-                  </div>
-                  <div style={styles.position}>
-                    <span style={styles.positionDistance}>2.1mi</span>
-                    <span>Mission Valley</span>
-                  </div>
-                </div>
-                <div style={styles.cost}>
-                  <div style={styles.costDescription}>Day pass</div>
-                  <div style={styles.costAmount}>$15.00</div>
-                </div>
-              </div>
+              <Checkbox label="Gym" />
+              <Checkbox label="Swimming" />
+              <Checkbox label="Yoga" />
+              <Checkbox label="Spinning" />
+              <Checkbox label="Kickboxing" />
             </div>
           </div>
 
-          <div style={styles.gym}>
-            <img src={gymABC} style={styles.gymImage}/>
-            <div style={styles.gymInfoBox}>
-              <div style={styles.gymTitle}>Gym ABC</div>
-              <div style={styles.gymDescription}>
-                <div style={styles.gymInfo}>
-                  <div style={styles.partner}>
-                    <Logo style={styles.logo} />
-                    <span style={styles.partnerDescription}>Zaemo Partner</span>
+          <div style={styles.contentPasses}>
+            <div style={styles.map}></div>
+
+            <div>
+              <div style={[styles.gym, styles.boxShadow]}>
+                <img src={gymA} style={styles.gymImage}/>
+                <div style={styles.gymInfoBox}>
+                  <div style={styles.gymTitle}>Gym A</div>
+                  <div style={styles.gymDescription}>
+                    <div style={styles.gymInfo}>
+                      <div style={styles.partner}>
+                        <Logo style={styles.logo} />
+                        <span style={styles.partnerDescription}>Zaemo Partner</span>
+                      </div>
+                      <div style={styles.position}>
+                        <span style={styles.positionDistance}>2.1mi</span>
+                        <span>Mission Valley</span>
+                      </div>
+                    </div>
+                    <div style={styles.cost}>
+                      <div style={styles.costDescription}>Day pass</div>
+                      <div style={styles.costAmount}>$15.00</div>
+                    </div>
                   </div>
-                  <div style={styles.position}>
-                    <span style={styles.positionDistance}>2.1mi</span>
-                    <span>Mission Valley</span>
-                  </div>
-                </div>
-                <div style={styles.cost}>
-                  <div style={styles.costDescription}>Day pass</div>
-                  <div style={styles.costAmount}>$15.00</div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div style={styles.gym}>
-            <img src={gymA} style={styles.gymImage}/>
-            <div style={styles.gymInfoBox}>
-              <div style={styles.gymTitle}>Gym A</div>
-              <div style={styles.gymDescription}>
-                <div style={styles.gymInfo}>
-                  <div style={styles.partner}>
-                    <Logo style={styles.logo} />
-                    <span style={styles.partnerDescription}>Zaemo Partner</span>
-                  </div>
-                  <div style={styles.position}>
-                    <span style={styles.positionDistance}>2.1mi</span>
-                    <span>Mission Valley</span>
+              <div style={[styles.gym, styles.boxShadow]}>
+                <img src={gymABC} style={styles.gymImage}/>
+                <div style={styles.gymInfoBox}>
+                  <div style={styles.gymTitle}>Gym ABC</div>
+                  <div style={styles.gymDescription}>
+                    <div style={styles.gymInfo}>
+                      <div style={styles.partner}>
+                        <Logo style={styles.logo} />
+                        <span style={styles.partnerDescription}>Zaemo Partner</span>
+                      </div>
+                      <div style={styles.position}>
+                        <span style={styles.positionDistance}>2.1mi</span>
+                        <span>Mission Valley</span>
+                      </div>
+                    </div>
+                    <div style={styles.cost}>
+                      <div style={styles.costDescription}>Day pass</div>
+                      <div style={styles.costAmount}>$15.00</div>
+                    </div>
                   </div>
                 </div>
-                <div style={styles.cost}>
-                  <div style={styles.costDescription}>Day pass</div>
-                  <div style={styles.costAmount}>$15.00</div>
+              </div>
+
+              <div style={[styles.gym, styles.boxShadow]}>
+                <img src={gymA} style={styles.gymImage}/>
+                <div style={styles.gymInfoBox}>
+                  <div style={styles.gymTitle}>Gym A</div>
+                  <div style={styles.gymDescription}>
+                    <div style={styles.gymInfo}>
+                      <div style={styles.partner}>
+                        <Logo style={styles.logo} />
+                        <span style={styles.partnerDescription}>Zaemo Partner</span>
+                      </div>
+                      <div style={styles.position}>
+                        <span style={styles.positionDistance}>2.1mi</span>
+                        <span>Mission Valley</span>
+                      </div>
+                    </div>
+                    <div style={styles.cost}>
+                      <div style={styles.costDescription}>Day pass</div>
+                      <div style={styles.costAmount}>$15.00</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -191,15 +203,46 @@ function HomeDesktop() {
 }
 
 const styles = {
-  appBar: {
-    backgroundColor: '#162233',
+  main: {
+    width: '1024px',
+    margin: '0 auto',
   },
-  appBarRightBox: {
+  boxShadow: {
+    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+  },
+  headerTopBar: {
+    background: '#031021',
+  },
+  headerBar: {
     display: 'flex',
-    width: '18.5%',
     justifyContent: 'space-between',
-    alignItems: 'center'
   },
+  headerBottomBar: {
+    background: '#15335c',
+  },
+  headerBottomBarAside: {
+    display: 'flex',
+  },
+  contentWrapper: {
+    background: '#f2f2f2',
+  },
+  content: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    background: '#f2f2f2',
+  },
+  contentFilter: {
+    flex: '0.2',
+    alignSelf: 'baseline',
+    background: 'white',
+    padding: '2.5% 2%',
+  },
+  contentPasses: {
+    flex: '0.78',
+  },
+
+
+
   map: {
     width: '100%',
     height: '26vh',
@@ -209,6 +252,8 @@ const styles = {
   gym: {
     fontFamily: 'Ubuntu',
     width: '100%',
+    background: 'white',
+    marginBottom: '20px',
   },
   gymImage: {
     width: '100%',
