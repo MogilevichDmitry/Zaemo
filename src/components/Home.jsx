@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
+import TextField from 'material-ui/TextField';
 import {List, ListItem} from 'material-ui/List';
 
 import Logo from 'material-ui/svg-icons/editor/insert-photo';
@@ -10,7 +11,6 @@ import SearchIcon from 'material-ui/svg-icons/action/search';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
-import TextField from 'material-ui/TextField';
 
 import mapBackground from '../images/layout/homeMapBg.jpg';
 import gymA from '../images/content/gymA.jpg';
@@ -63,15 +63,21 @@ class Home extends Component {
               </div>
             </AppBar> :
             <AppBar
-              style={{backgroundColor: 'gray'}}
+              style={styles.appBarSearch}
               iconElementLeft={
                 <IconButton>
                   <ArrowBack color={'#4877f9'} />
                 </IconButton>
               }
             >
-              <TextField id="search" onChange={this.handleSearch} />
-              <NavigationClose color={'#4877f9'}/>
+              <TextField
+                style={styles.appBarSearchInput}
+                id="search"
+                hintText="search"
+                hintStyle={styles.inputHintStyle}
+                onChange={this.handleSearch}
+              />
+              <NavigationClose style={styles.appBarSearchClose} color={'#4877f9'}/>
             </AppBar>
         }
 
@@ -80,29 +86,23 @@ class Home extends Component {
             <List>
               <ListItem
                 primaryText={
-                  <div>
-                    <p>Pilates Club</p>
-                    <p>5222 Peaches Rd, San Diego CA, 92141</p>
-                  </div>
+                  <p style={styles.listMainInfo}>Pilates Club</p>
                 }
+                secondaryText="5222 Peaches Rd, San Diego CA, 92141"
                 leftIcon={<SearchIcon />}
               />
               <ListItem
                 primaryText={
-                  <div>
-                    <p>Pilates Club</p>
-                    <p>8451 Lychee Rd, San Diego CA, 93589</p>
-                  </div>
+                  <p style={styles.listMainInfo}>Pilates Club</p>
                 }
+                secondaryText="8451 Lychee Rd, San Diego CA, 93589"
                 leftIcon={<SearchIcon />}
               />
               <ListItem
                 primaryText={
-                  <div>
-                    <p>Pilates Studio</p>
-                    <p>3488 Grapes Rd, San Diego CA, 9741</p>
-                  </div>
+                  <p style={styles.listMainInfo}>Pilates Club</p>
                 }
+                secondaryText="3488 Grapes Rd, San Diego CA, 9741"
                 leftIcon={<SearchIcon />}
               />
             </List> : ''
@@ -189,9 +189,29 @@ const styles = {
   },
   appBarRightBox: {
     display: 'flex',
-    width: '18.5%',
+    width: '70px',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+  },
+  appBarSearch: {
+    position: 'relative',
+    backgroundColor: '#fafafa',
+  },
+  appBarSearchClose: {
+    position: 'absolute',
+    top: '20px',
+    right: '24px',
+  },
+  appBarSearchInput: {
+    position: 'absolute',
+    left: '72px',
+    fontWeight: '500',
+  },
+  inputHintStyle: {
+    fontWeight: 400,
+  },
+  listMainInfo: {
+    fontWeight: '500',
   },
   map: {
     width: '100%',
