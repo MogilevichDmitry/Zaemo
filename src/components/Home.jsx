@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import TextField from 'material-ui/TextField';
 import {List, ListItem} from 'material-ui/List';
+import { Link } from 'react-router';
 
 import Logo from 'material-ui/svg-icons/editor/insert-photo';
 import FilterListIcon from 'material-ui/svg-icons/content/filter-list';
@@ -27,6 +28,7 @@ class Home extends Component {
 
     this.handleOpenSearchBar = this.handleOpenSearchBar.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleBackToAppBar = this.handleBackToAppBar.bind(this);
   }
 
   handleOpenSearchBar() {
@@ -41,6 +43,12 @@ class Home extends Component {
     this.setState({
       text,
     });
+  }
+
+  handleBackToAppBar() {
+    this.setState({
+      searchBar: !this.state.searchBar,
+    })
   }
 
   render() {
@@ -65,7 +73,7 @@ class Home extends Component {
             <AppBar
               style={styles.appBarSearch}
               iconElementLeft={
-                <IconButton>
+                <IconButton onClick={this.handleBackToAppBar}>
                   <ArrowBack color={'#4877f9'} />
                 </IconButton>
               }
@@ -77,34 +85,42 @@ class Home extends Component {
                 hintStyle={styles.inputHintStyle}
                 onChange={this.handleSearch}
               />
-              <NavigationClose style={styles.appBarSearchClose} color={'#4877f9'}/>
+              <NavigationClose style={styles.appBarSearchClose} color={'#4877f9'} onClick={this.handleBackToAppBar} />
             </AppBar>
         }
 
         {
           this.state.text.length > 0 ?
             <List>
-              <ListItem
-                primaryText={
+              <Link to="/search-result" style={styles.listLink}>
+                <ListItem
+                  primaryText={
                   <p style={styles.listMainInfo}>Pilates Club</p>
                 }
-                secondaryText="5222 Peaches Rd, San Diego CA, 92141"
-                leftIcon={<SearchIcon />}
-              />
-              <ListItem
-                primaryText={
-                  <p style={styles.listMainInfo}>Pilates Club</p>
-                }
-                secondaryText="8451 Lychee Rd, San Diego CA, 93589"
-                leftIcon={<SearchIcon />}
-              />
-              <ListItem
-                primaryText={
-                  <p style={styles.listMainInfo}>Pilates Club</p>
-                }
-                secondaryText="3488 Grapes Rd, San Diego CA, 9741"
-                leftIcon={<SearchIcon />}
-              />
+                  secondaryText="5222 Peaches Rd, San Diego CA, 92141"
+                  leftIcon={<SearchIcon />}
+                />
+              </Link>
+
+              <Link to="/search-result" style={styles.listLink}>
+                <ListItem
+                  primaryText={
+                    <p style={styles.listMainInfo}>Pilates Club</p>
+                  }
+                  secondaryText="8451 Lychee Rd, San Diego CA, 93589"
+                  leftIcon={<SearchIcon />}
+                />
+              </Link>
+
+              <Link to="/search-result" style={styles.listLink}>
+                <ListItem
+                  primaryText={
+                    <p style={styles.listMainInfo}>Pilates Club</p>
+                  }
+                  secondaryText="3488 Grapes Rd, San Diego CA, 9741"
+                  leftIcon={<SearchIcon />}
+                />
+              </Link>  
             </List> : ''
         }
 
@@ -210,6 +226,9 @@ const styles = {
   inputHintStyle: {
     fontWeight: 400,
   },
+  listLink: {
+    textDecoration: 'none',
+  },
   listMainInfo: {
     fontWeight: '500',
   },
@@ -274,6 +293,6 @@ const styles = {
     fontSize: '28px',
     color: 'black',
   }
-}
+};
 
 export default Home = Radium(Home);
