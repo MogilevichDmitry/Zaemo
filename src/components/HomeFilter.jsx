@@ -36,7 +36,6 @@ function HomeFilter() {
             name="cost"
             defaultSelected="not_checked"
             style={styles.radioButtons}
-            iconStyle={styles.radioIcon}
           >
             <RadioButton
               label="Under $25"
