@@ -6,7 +6,6 @@ import HomeFilter from './components/HomeFilter.jsx';
 import RegisterStepOne from './components/Register/StepOne.jsx';
 import RegisterStepTwo from './components/Register/StepTwo.jsx';
 import RegisterStepThee from './components/Register/StepThree.jsx';
-import HomeDesktop from './components/HomeDesktop.jsx';
 import SearchResult from './components/SearchResult.jsx';
 
 export default function() {
@@ -14,7 +13,6 @@ export default function() {
     <Route path="/" component={Home} />
     <Route path="login" component={Login} />
     <Route path="home-filter" component={HomeFilter} />
-    <Route path="home-desktop" component={HomeDesktop} />
     <Route path="search-result" component={SearchResult} />
 
     <Route path="register">
