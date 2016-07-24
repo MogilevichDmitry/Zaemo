@@ -19,7 +19,6 @@ function HomeDesktop() {
     <div style={styles.header}>
       <div style={styles.headerTopBar}>
         <div style={styles.main}>
-          {/* TODO add logo */}
           <div style={styles.headerBar}>
             <div style={{color: 'white'}}>logo</div>
             <div>
@@ -67,16 +66,21 @@ function HomeDesktop() {
   <div style={styles.contentWrapper}>
       <div style={styles.main}>
         <div style={styles.content}>
-          <div style={[styles.contentFilter, styles.boxShadow]}>
-            <div>
-              <h1>Filter By</h1>
+          <div style={styles.contentFilter}>
+            <div style={styles.contentFilterBox}>
+              <h1 style={styles.title}>Filter By</h1>
 
               <SelectField
                 floatingLabelText="Search radius"
                 floatingLabelFixed={true}
+                floatingLabelStyle={styles.fieldLabel}
+                underlineStyle={styles.underline}
+                iconStyle={styles.selectFieldIcon}
+                style={styles.filterField}
               >
-                <MenuItem primaryText="5 miles" />
                 <MenuItem primaryText="3 miles" />
+                <MenuItem primaryText="5 miles" />
+                <MenuItem primaryText="8 miles" />
                 <MenuItem primaryText="6 miles" />
                 <MenuItem primaryText="9 miles" />
                 <MenuItem primaryText="11 miles" />
@@ -85,11 +89,18 @@ function HomeDesktop() {
               <TextField
                 floatingLabelText="Zipcode"
                 floatingLabelFixed={true}
+                floatingLabelStyle={styles.fieldLabel}
+                underlineStyle={styles.underline}
+                style={styles.filterField}
               />
 
               <SelectField
                 floatingLabelText="State"
                 floatingLabelFixed={true}
+                floatingLabelStyle={styles.fieldLabel}
+                underlineStyle={styles.underline}
+                iconStyle={styles.selectFieldIcon}
+                style={styles.filterField}
               >
                 <MenuItem primaryText="CO" />
                 <MenuItem primaryText="FL" />
@@ -99,26 +110,71 @@ function HomeDesktop() {
               </SelectField>
             </div>
 
-            <div>
-              <h1>Price</h1>
+            <div style={styles.contentFilterBox}>
+              <h1 style={styles.title}>Price</h1>
 
               <RadioButtonGroup name="shipName" defaultSelected="not_checked">
-                <RadioButton label="Under $25" value="$25" />
-                <RadioButton label="$25 to $50" value="$25to$50" />
-                <RadioButton label="$50 to $100" value="$50to$100" />
-                <RadioButton label="$100 to $200" value="$100to$200" />
-                <RadioButton label="$200 & above" value="$200&above" />
+                <RadioButton
+                  label="Under $25"
+                  value="$25"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$25 to $50"
+                  value="$25to$50"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$50 to $100"
+                  value="$50to$100"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$100 to $200"
+                  value="$100to$200"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$200 & above"
+                  value="$200&above"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
               </RadioButtonGroup>
             </div>
 
-            <div>
-              <h1>Activities</h1>
+            <div style={styles.contentFilterBox}>
+              <h1 style={styles.title}>Activities</h1>
 
-              <Checkbox label="Gym" />
-              <Checkbox label="Swimming" />
-              <Checkbox label="Yoga" />
-              <Checkbox label="Spinning" />
-              <Checkbox label="Kickboxing" />
+              <Checkbox
+                label="Gym"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Swimming"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Yoga"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Spinning"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Kickboxing"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
             </div>
           </div>
 
@@ -207,9 +263,6 @@ const styles = {
     width: '1024px',
     margin: '0 auto',
   },
-  boxShadow: {
-    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-  },
   headerTopBar: {
     background: '#031021',
   },
@@ -232,11 +285,53 @@ const styles = {
     background: '#f2f2f2',
   },
   contentFilter: {
-    flex: '0.2',
+    flex: '0.205',
     alignSelf: 'baseline',
     background: 'white',
-    padding: '2.5% 2%',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+    padding: '25px 25px 0',
   },
+  contentFilterBox: {
+    marginBottom: '25px',
+    width: '195px',
+  },
+  title: {
+    fontFamily: 'Ubuntu',
+    fontSize: '18px',
+    fontWeight: '500',
+    color: '#4d4d4d',
+    marginBottom: '25px',
+  },
+  radioButton: {
+    marginBottom: '13px',
+    fontWeight: '300',
+    color: '#666666',
+  },
+  radioIcon: {
+    fill: '#4877f9',
+    marginRight: '10px',
+  },
+  checkbox: {
+    marginBottom: '13px',
+    fontWeight: '300',
+  },
+  checkboxIcon: {
+    fill: '#4877f9',
+    marginRight: '10px',
+  },
+  filterField: {
+    width: '195px',
+  },
+  fieldLabel: {
+    color: 'rgba(153, 153, 153, 1)',
+  },
+  underline: {
+    borderColor: 'rgba(72, 119, 249, 0.7)',
+  },
+  selectFieldIcon: {
+    fill: '#4877f9',
+  },
+
   contentPasses: {
     flex: '0.78',
   },
