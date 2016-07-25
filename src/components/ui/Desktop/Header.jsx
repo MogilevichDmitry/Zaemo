@@ -5,6 +5,7 @@ import Avatar from 'material-ui/Avatar';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import IconMenu from 'material-ui/IconMenu';
 import Tabs from '../Tabs.jsx';
 import Tab from '../Tab.jsx';
 
@@ -14,6 +15,7 @@ import ArrowDropDown from 'material-ui/svg-icons/navigation/arrow-drop-down';
 import avatar from '../../../images/content/avatar.png';
 
 function Header({ search, sort }) {
+
   return  <div style={styles.header}>
     <div style={styles.topBar}>
       <div style={styles.main}>
@@ -23,9 +25,19 @@ function Header({ search, sort }) {
           </div>
           <div style={styles.profile}>
             <span style={styles.profileName}>Frank Hill</span>
-            <IconButton>
-              <ArrowDropDown color={'#4877f9'} />
-            </IconButton>
+            <IconMenu
+              iconButtonElement={
+                <IconButton><ArrowDropDown color={'#4877f9'} /></IconButton>
+              }
+              anchorOrigin={{horizontal: 'middle', vertical: 'bottom'}}
+              targetOrigin={{horizontal: 'middle', vertical: 'top'}}
+            >
+              <MenuItem primaryText="Settings" />
+              <MenuItem primaryText="Log out" />
+            </IconMenu>
+
+
+
 
             <Avatar src={avatar} style={styles.avatar} />
 
@@ -59,19 +71,21 @@ function Header({ search, sort }) {
               sort === false ?
                 '' :
                 <div style={styles.bottomBarSort}>
-                  <span style={styles.bottomBarSortDescription}>Sort by:</span>
-                  <SelectField
-                    value={1}
-                    underlineShow={false}
+                  <span style={styles.bottomBarSortDescription}>Sort by: Name: A-Z</span>
+                  <IconMenu
+                    iconButtonElement={
+                      <IconButton><ArrowDropDown color={'#4877f9'} /></IconButton>
+                    }
+                    anchorOrigin={{horizontal: 'middle', vertical: 'bottom'}}
+                    targetOrigin={{horizontal: 'middle', vertical: 'top'}}
                     iconStyle={styles.sortIcon}
-                    labelStyle={styles.bottomBarSortLabel}
                     style={styles.bottomBarSortButton}
                   >
-                    <MenuItem value={1} primaryText="Name: A-Z" />
-                    <MenuItem value={2} primaryText="Name: Z-A" />
-                    <MenuItem value={3} primaryText="Cost" />
-                    <MenuItem value={4} primaryText="Distance" />
-                  </SelectField>
+                    <MenuItem primaryText="Name: A-Z" />
+                    <MenuItem primaryText="Name: Z-A" />
+                    <MenuItem primaryText="Cost" />
+                    <MenuItem primaryText="Distance" />
+                  </IconMenu>
                 </div>
             }
           </div>
