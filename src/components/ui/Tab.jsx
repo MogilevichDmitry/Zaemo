@@ -3,7 +3,7 @@ import Radium from 'radium';
 
 function Tab({ label, active, desktop }) {
   let style = desktop ? [styles.tab, stylesDesktop] : styles.tab;
-  style = active ? [...style, styles.tabActive] : style;
+  style = active ? [style, styles.tabActive] : style;
 
   return <div style={style}>{label}</div>;
 }
@@ -13,7 +13,9 @@ const styles = {
     display: 'inline-block',
     height: '100%',
     width: '50%',
-    borderBottom: '#1px solid 8a9099',
+    borderBottom: '1px solid #8a9099',
+    cursor: 'pointer',
+    paddingBottom: '5px',
     ':hover': {
       color: 'white',
     },

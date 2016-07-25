@@ -36,7 +36,7 @@ function SearchResult() {
     <div style={styles.gym}>
       <img src={gymA} style={styles.gymImage}/>
       <div style={styles.gymInfoBox}>
-        <div style={styles.gymTitle}>Gym A</div>
+        <div style={styles.gymTitle}>Pilates</div>
         <div style={styles.gymDescription}>
           <div style={styles.gymInfo}>
             <div style={styles.partner}>
@@ -59,7 +59,7 @@ function SearchResult() {
     <div style={styles.gym}>
       <img src={gymABC} style={styles.gymImage}/>
       <div style={styles.gymInfoBox}>
-        <div style={styles.gymTitle}>Gym ABC</div>
+        <div style={styles.gymTitle}>Pilates</div>
         <div style={styles.gymDescription}>
           <div style={styles.gymInfo}>
             <div style={styles.partner}>
@@ -82,7 +82,7 @@ function SearchResult() {
     <div style={styles.gym}>
       <img src={gymA} style={styles.gymImage}/>
       <div style={styles.gymInfoBox}>
-        <div style={styles.gymTitle}>Gym A</div>
+        <div style={styles.gymTitle}>Pilates</div>
         <div style={styles.gymDescription}>
           <div style={styles.gymInfo}>
             <div style={styles.partner}>
