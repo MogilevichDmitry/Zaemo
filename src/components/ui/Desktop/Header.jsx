@@ -5,6 +5,8 @@ import Avatar from 'material-ui/Avatar';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import Tabs from '../Tabs.jsx';
+import Tab from '../Tab.jsx';
 
 import ZeamoLogo from '../../../images/layout/ZeamoLogo.svg';
 import ArrowDropDown from 'material-ui/svg-icons/navigation/arrow-drop-down';
@@ -12,11 +14,11 @@ import ArrowDropDown from 'material-ui/svg-icons/navigation/arrow-drop-down';
 import avatar from '../../../images/content/avatar.png';
 
 function Header({ search, sort }) {
-  return  <div style={styles.headerDesktop}>
-    <div style={styles.headerTopBar}>
+  return  <div style={styles.header}>
+    <div style={styles.topBar}>
       <div style={styles.main}>
         <div style={styles.headerBar}>
-          <div style={styles.headerLogo}>
+          <div style={styles.logo}>
             <img src={ZeamoLogo} />
           </div>
           <div style={styles.profile}>
@@ -32,38 +34,38 @@ function Header({ search, sort }) {
       </div>
     </div>
 
-    <div style={styles.headerBottomBar}>
+    <div style={styles.bottomBar}>
       <div style={styles.main}>
         <div style={styles.headerBar}>
-          <div style={styles.tabs}>
-            <div key="tab1" style={[styles.tab, styles.tabActive]}>Browse</div>
-            <div key="tab2" style={styles.tab}>My Passes</div>
-          </div>
+          <Tabs desktop={true}>
+            <Tab label="Browse" desktop={true} active={true} />
+            <Tab label="My passes" desktop={true} active={false} />
+          </Tabs>
 
-          <div style={styles.headerBottomBarAside}>
+          <div style={styles.bottomBarAside}>
             {
               search === false ?
                 '' :
                 <TextField
                   hintText="Search"
-                  hintStyle={styles.headerBottomBarSearchHint}
-                  inputStyle={styles.headerBottomBarSearchInput}
-                  underlineStyle={styles.headerBottomBarSearchUnderline}
-                  style={styles.headerBottomBarSearch}
+                  hintStyle={styles.bottomBarSearchHint}
+                  inputStyle={styles.bottomBarSearchInput}
+                  underlineStyle={styles.bottomBarSearchUnderline}
+                  style={styles.bottomBarSearch}
                 />
             }
 
             {
               sort === false ?
                 '' :
-                <div style={styles.headerBottomBarSort}>
-                  <span style={styles.headerBottomBarSortDescription}>Sort by:</span>
+                <div style={styles.bottomBarSort}>
+                  <span style={styles.bottomBarSortDescription}>Sort by:</span>
                   <SelectField
                     value={1}
                     underlineShow={false}
                     iconStyle={styles.sortIcon}
-                    labelStyle={styles.headerBottomBarSortLabel}
-                    style={styles.headerBottomBarSortButton}
+                    labelStyle={styles.bottomBarSortLabel}
+                    style={styles.bottomBarSortButton}
                   >
                     <MenuItem value={1} primaryText="Name: A-Z" />
                     <MenuItem value={2} primaryText="Name: Z-A" />
@@ -80,15 +82,6 @@ function Header({ search, sort }) {
 }
 
 const styles = {
-  headerDesktop: {
-    '@media (max-width: 770px)': {
-      display: 'none'
-    }
-  },
-  headerTopBar: {
-    background: '#031021',
-    padding: '10px 0 6px',
-  },
   main: {
     '@media (min-width: 770px)': {
       maxWidth: '750px',
@@ -111,11 +104,20 @@ const styles = {
       margin: '0 auto',
     },
   },
+  header: {
+    '@media (max-width: 770px)': {
+      display: 'none'
+    }
+  },
+  topBar: {
+    background: '#031021',
+    padding: '10px 0 6px',
+  },
   headerBar: {
     display: 'flex',
     justifyContent: 'space-between',
   },
-  headerLogo: {
+  logo: {
     width: '102px',
     display: 'table',
     margin: 'auto 0 auto 10px',
@@ -134,65 +136,46 @@ const styles = {
     margin: 'auto',
     width: '44px',
   },
-  headerBottomBar: {
+  bottomBar: {
     background: '#15335c',
   },
-  tabs: {
-    fontFamily: 'Ubuntu',
-    fontSize: '16px',
-    color: '#dce1e7'
-  },
-  tab: {
-    display: 'inline-block',
-    height: '100%',
-    padding: '15px 45px 18px',
-    cursor: 'pointer',
-    ':hover': {
-      color: 'white',
-    },
-  },
-  tabActive: {
-    color: 'white',
-    borderBottom: '5px solid #4877f9',
-    fontWeight: '500',
-  },
-  headerBottomBarAside: {
+  bottomBarAside: {
     display: 'flex',
     position: 'relative',
   },
-  headerBottomBarSearchHint: {
+  bottomBarSearchHint: {
     color: '#dce1e7',
     bottom: '17px',
   },
-  headerBottomBarSearchInput: {
+  bottomBarSearchInput: {
     color: 'white',
   },
-  headerBottomBarSearchUnderline: {
+  bottomBarSearchUnderline: {
     borderColor: '#8a99ae',
     bottom: '1px',
   },
-  headerBottomBarSearch: {
+  bottomBarSearch: {
     position: 'absolute',
     width: '150px',
     left: '-133px',
     bottom: '0',
   },
-  headerBottomBarSort: {
+  bottomBarSort: {
     display: 'flex',
     fontFamily: 'Ubuntu',
   },
-  headerBottomBarSortDescription: {
+  bottomBarSortDescription: {
     color: '#dce1e7',
     margin: 'auto 10px auto 37px',
   },
   sortIcon: {
     fill: '#4877f9',
   },
-  headerBottomBarSortButton: {
+  bottomBarSortButton: {
     width: 'auto',
     margin: 'auto',
   },
-  headerBottomBarSortLabel: {
+  bottomBarSortLabel: {
     color: 'white',
   },
 };

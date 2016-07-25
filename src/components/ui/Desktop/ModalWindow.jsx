@@ -12,8 +12,8 @@ export default function ModalWindow({ children, title, width, height }) {
         <IconButton><NavigationClose /></IconButton>
       }
     />
-
-    
-    {children}
-  </div>
+    <div>
+      {children}
+    </div>
+  </div>;
 }
