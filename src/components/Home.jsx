@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Radium from 'radium';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import Avatar from 'material-ui/Avatar';
-import { Tabs, Tab } from 'material-ui/Tabs';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import Checkbox from 'material-ui/Checkbox';
 import AppBar from 'material-ui/AppBar';
@@ -11,17 +9,15 @@ import IconButton from 'material-ui/IconButton';
 import TextField from 'material-ui/TextField';
 import { List, ListItem } from 'material-ui/List';
 import { Link } from 'react-router';
+import Header from './ui/Desktop/Header.jsx';
 
-import ZeamoLogo from '../images/layout/ZeamoLogo.svg';
 import ZeamoIcon from '../images/layout/ZeamoIcon.svg';
 import FilterListIcon from 'material-ui/svg-icons/content/filter-list';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
-import ArrowDropDown from 'material-ui/svg-icons/navigation/arrow-drop-down';
 
-import avatar from '../images/content/avatar.png';
 import mapBackground from '../images/layout/homeMapBg.jpg';
 import gymA from '../images/content/gymA.jpg';
 import gymABC from '../images/content/gymABC.jpg';
@@ -63,63 +59,8 @@ class Home extends Component {
   render() {
     return (
       <div style={styles.home}>
-        <div style={styles.headerDesktop}>
-          <div style={styles.headerTopBar}>
-            <div style={styles.main}>
-              <div style={styles.headerBar}>
-                <div style={styles.headerLogo}>
-                  <img src={ZeamoLogo} />
-                </div>
-                <div style={styles.profile}>
-                  <span style={styles.profileName}>Frank Hill</span>
-                  <IconButton>
-                    <ArrowDropDown color={'#4877f9'} />
-                  </IconButton>
+        <Header />
 
-                  <Avatar src={avatar} style={styles.avatar} />
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style={styles.headerBottomBar}>
-            <div style={styles.main}>
-              <div style={styles.headerBar}>
-                <div style={styles.tabs}>
-                  <div key="tab1" style={[styles.tab, styles.tabActive]}>Browse</div>
-                  <div key="tab2" style={styles.tab}>My Passes</div>
-                </div>
-
-                <div style={styles.headerBottomBarAside}>
-                  <TextField
-                    hintText="Search"
-                    hintStyle={styles.headerBottomBarSearchHint}
-                    inputStyle={styles.headerBottomBarSearchInput}
-                    underlineStyle={styles.headerBottomBarSearchUnderline}
-                    style={styles.headerBottomBarSearch}
-                  />
-
-                  <div style={styles.headerBottomBarSort}>
-                    <span style={styles.headerBottomBarSortDescription}>Sort by:</span>
-                    <SelectField
-                      value={1}
-                      underlineShow={false}
-                      iconStyle={styles.sortIcon}
-                      labelStyle={styles.headerBottomBarSortLabel}
-                      style={styles.headerBottomBarSortButton}
-                    >
-                      <MenuItem value={1} primaryText="Name: A-Z" />
-                      <MenuItem value={2} primaryText="Name: Z-A" />
-                      <MenuItem value={3} primaryText="Cost" />
-                      <MenuItem value={4} primaryText="Distance" />
-                    </SelectField>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div style={styles.headerMobile}>
           {
             this.state.searchBar === false ?
@@ -474,100 +415,7 @@ const styles = {
     left: '72px',
     width: '45%',
     fontWeight: '500',
-  },
-  headerDesktop: {
-    '@media (max-width: 770px)': {
-      display: 'none'
-    }
-  },
-  headerTopBar: {
-    background: '#031021',
-    padding: '10px 0 6px',
-  },
-  headerLogo: {
-    width: '102px',
-    display: 'table',
-    margin: 'auto 0 auto 10px',
-  },
-  profile: {
-    display:'flex',
-    fontFamily: 'Ubuntu',
-    color: 'white',
-  },
-  profileName: {
-    margin: 'auto',
-    fontSize: '17px',
-  },
-  avatar: {
-    backgroundColor: 'none',
-    margin: 'auto',
-    width: '44px',
-  },
-  headerBar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  headerBottomBar: {
-    background: '#15335c',
-  },
-  tabs: {
-    fontFamily: 'Ubuntu',
-    fontSize: '16px',
-    color: '#dce1e7'
-  },
-  tab: {
-    display: 'inline-block',
-    height: '100%',
-    padding: '15px 45px 18px',
-    cursor: 'pointer',
-    ':hover': {
-      color: 'white',
-    },
-  },
-  tabActive: {
-    color: 'white',
-    borderBottom: '5px solid #4877f9',
-    fontWeight: '500',
-  },
-  headerBottomBarAside: {
-    display: 'flex',
-    position: 'relative',
-  },
-  headerBottomBarSearch: {
-    position: 'absolute',
-    width: '150px',
-    left: '-133px',
-    bottom: '0',
-  },
-  headerBottomBarSearchHint: {
-    color: '#dce1e7',
-    bottom: '17px',
-  },
-  headerBottomBarSearchInput: {
-    color: 'white',
-  },
-  headerBottomBarSearchUnderline: {
-    borderColor: '#8a99ae',
-    bottom: '1px',
-  },
-  headerBottomBarSort: {
-    display: 'flex',
-    fontFamily: 'Ubuntu',
-  },
-  headerBottomBarSortDescription: {
-    color: '#dce1e7',
-    margin: 'auto 10px auto 37px',
-  },
-  headerBottomBarSortButton: {
-    width: 'auto',
-    margin: 'auto',
-  },
-  headerBottomBarSortLabel: {
-    color: 'white',
-  },
-  sortIcon: {
-    fill: '#4877f9',
-  },
+  },  
   content: {
     display: 'flex',
     justifyContent: 'space-between',
