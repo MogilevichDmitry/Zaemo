@@ -10,7 +10,7 @@ import TextField from 'material-ui/TextField';
 import { List, ListItem } from 'material-ui/List';
 import { Link } from 'react-router';
 import Header from './ui/Desktop/Header.jsx';
-import Gym from './ui/Desktop/Gym.jsx';
+import Gym from './ui/Gym.jsx';
 
 import FilterListIcon from 'material-ui/svg-icons/content/filter-list';
 import SearchIcon from 'material-ui/svg-icons/action/search';
@@ -65,7 +65,7 @@ class Home extends Component {
           {
             this.state.searchBar === false ?
               <AppBar
-                title="Zeamo"
+                title="Zeam"
                 style={styles.appBar}
                 iconElementLeft={
                   <IconButton>
