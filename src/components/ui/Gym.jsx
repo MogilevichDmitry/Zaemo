@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import ZeamoIcon from '../../../images/layout/ZeamoIcon.svg';
+import ZeamoIcon from '../../images/layout/ZeamoIcon.svg';
 
 function Gym({ src, title, dayPass, expiresIn, useBy, expired }) {
   return <div style={styles.gym}>

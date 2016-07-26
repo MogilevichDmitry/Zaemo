@@ -7,14 +7,14 @@ function GymPass({ src, title, status, }) {
   return <div>
     <div>
       <div>
-        <img src={src} />
+        <img src={src} style={{width: '400px', height: '100px'}}/>
       </div>
 
       <div>
-        <div>{title}</div>
-        <div>
-          <img src={ZeamoIcon} />
-          <span>Zaemo Partner</span>
+        <div style={styles.gymTitle}>{title}</div>
+        <div style={styles.partner}>
+          <img src={ZeamoIcon} style={styles.zeamoIcon} />
+          <span style={styles.partnerDescription}>Zaemo Partner</span>
         </div>
       </div>
 
@@ -85,7 +85,7 @@ function GymPass({ src, title, status, }) {
             <div>
               <div>Instruction</div>
               <div>
-                Show this screen to the gym representative to get checked in and activate the pass /n
+                Show this screen to the gym representative to get checked in and activate the pass
                 Once activated, count down cannot be paused.
               </div>
             </div> : ''
@@ -105,5 +105,30 @@ function GymPass({ src, title, status, }) {
     
   </div>
 }
+
+const styles = {
+  gymTitle: {
+    marginBottom: '2%',
+    color: '#031021',
+    fontWeight: '500',
+    fontSize: '18px',
+  },
+  partner: {
+    fontSize: '14px',
+    marginBottom: '2%',
+    display: 'flex',
+    '@media (min-width: 770px)':{
+      marginBottom: '6px',
+    },
+  },
+  zeamoIcon: {
+    width: '14px',
+    height: '14px',
+    margin: 'auto 1.5% auto 0',
+  },
+  partnerDescription: {
+    color: '#666666',
+  },
+};
 
 export default GymPass = Radium(GymPass);

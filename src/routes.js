@@ -9,7 +9,6 @@ import RegisterStepThee from './components/Register/StepThree.jsx';
 import SearchResult from './components/SearchResult.jsx';
 import GymDetailDesktop from './components/GymDetail/GymDetailDesktop.jsx';
 import GymDetailMobile from './components/GymDetail/GymDetailMobile.jsx';
-import ActivatePass from './components/ui/Desktop/GymPass/Active.jsx';
 
 export default function() {
   return <Route>
@@ -19,7 +18,6 @@ export default function() {
     <Route path="search-result" component={SearchResult} />
     <Route path="gym-detail-mobile" component={GymDetailMobile} />
     <Route path="gym-detail-desktop" component={GymDetailDesktop} />
-    <Route path="gym-pass" component={ActivatePass} />
 
     <Route path="register">
       <IndexRoute component={RegisterStepOne} />
