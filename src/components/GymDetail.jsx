@@ -7,7 +7,7 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import Tabs from './ui/Tabs.jsx';
 import Tab from './ui/Tab.jsx';
-import Purchase from './ui/Purchase.jsx';
+import Purchase from './ui/Desktop/Purchase.jsx';
 
 import ArrowNearMe from 'material-ui/svg-icons/maps/near-me';
 import Call from 'material-ui/svg-icons/communication/call';
