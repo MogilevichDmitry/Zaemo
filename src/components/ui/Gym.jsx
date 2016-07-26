@@ -149,7 +149,6 @@ const styles = {
     fontSize: '14px',
     color: '#666666',
     fontWeight: '300',
-    opacity: '0.7',
   },
   positionText: {
     marginRight: '10px',
