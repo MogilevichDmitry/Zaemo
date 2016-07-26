@@ -8,6 +8,7 @@ import RegisterStepTwo from './components/Register/StepTwo.jsx';
 import RegisterStepThee from './components/Register/StepThree.jsx';
 import SearchResult from './components/SearchResult.jsx';
 import Modal from './components/ui/Desktop/ModalWindow.jsx';
+import Purchase from './components/ui/Desktop/Purchase.jsx';
 
 import GymDetail from './components/GymDetail.jsx';
 
@@ -19,6 +20,7 @@ export default () => {
     <Route path="search-result" component={SearchResult} />
     <Route path="gym-detail" component={GymDetail} />
     <Route path="modal" component={Modal} />
+    <Route path="purchase" component={Purchase} />
 
     <Route path="register">
       <IndexRoute component={RegisterStepOne} />
