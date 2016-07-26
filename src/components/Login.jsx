@@ -11,7 +11,7 @@ import Lock from 'material-ui/svg-icons/action/lock';
 
 import background from '../images/layout/loginBg.jpg';
 
-function Login() {
+const Login = () => {
   return <div style={styles.login}>
 
     <div style={styles.logoWrapper}>
@@ -135,4 +135,4 @@ const styles = {
   },
 };
 
-export default Login = Radium(Login);
+export default Radium(Login);

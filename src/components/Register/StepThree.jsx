@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-function StepThree() {
+const StepThree = () => {
   return <div style={styles.stepThree}>
 
     <AppBar
@@ -82,4 +82,4 @@ const styles = {
   },
 };
 
-export default StepThree = Radium(StepThree);
+export default Radium(StepThree);

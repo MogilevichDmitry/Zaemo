@@ -3,7 +3,6 @@ import Radium from 'radium';
 import IconButton from 'material-ui/IconButton';
 import Avatar from 'material-ui/Avatar';
 import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import IconMenu from 'material-ui/IconMenu';
 import Tabs from '../Tabs.jsx';
@@ -14,8 +13,7 @@ import ArrowDropDown from 'material-ui/svg-icons/navigation/arrow-drop-down';
 
 import avatar from '../../../images/content/avatar.png';
 
-function Header({ search, sort }) {
-
+const Header = ({ search, sort }) => {
   return  <div style={styles.header}>
     <div style={styles.topBar}>
       <div style={styles.main}>
@@ -35,12 +33,8 @@ function Header({ search, sort }) {
               <MenuItem primaryText="Settings" />
               <MenuItem primaryText="Log out" />
             </IconMenu>
-
-
-
-
+            
             <Avatar src={avatar} style={styles.avatar} />
-
           </div>
         </div>
       </div>
@@ -194,4 +188,4 @@ const styles = {
   },
 };
 
-export default Header = Radium(Header);
+export default Radium(Header);

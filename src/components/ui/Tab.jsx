@@ -1,7 +1,7 @@
 import React  from 'react';
 import Radium from 'radium';
 
-function Tab({ label, active, desktop }) {
+const Tab = ({ label, active, desktop }) => {
   let style = desktop ? [styles.tab, stylesDesktop] : styles.tab;
   style = active ? [style, styles.tabActive] : style;
 
@@ -34,4 +34,4 @@ const stylesDesktop = {
   borderBottom: 'none',
 };
 
-export default Tab = Radium(Tab);
+export default Radium(Tab);

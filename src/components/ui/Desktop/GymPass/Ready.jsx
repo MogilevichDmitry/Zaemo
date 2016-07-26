@@ -1,11 +1,12 @@
 import React from 'react';
+import Radium from 'radium';
 import ModalWindow from '../ModalWindow.jsx';
 import GymPass from './index.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import gymA from '../../../../images/content/gymA.jpg';
 
-export default function() {
+const Ready = () => {
   return <ModalWindow title="New day pass" width="400px" height="300px">
     <GymPass
       src={gymA}
@@ -23,3 +24,5 @@ export default function() {
     </div>
   </ModalWindow>;
 }
+
+export default Radium(Ready);

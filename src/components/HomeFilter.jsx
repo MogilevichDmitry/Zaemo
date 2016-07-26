@@ -12,7 +12,7 @@ import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-function HomeFilter() {
+const HomeFilter = () => {
   return <div>
     <AppBar
       style={styles.appBar}
@@ -256,4 +256,4 @@ const styles = {
   },
 };
 
-export default HomeFilter = Radium(HomeFilter);
+export default Radium(HomeFilter);

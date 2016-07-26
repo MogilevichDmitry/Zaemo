@@ -11,7 +11,7 @@ const expiresIn = {
   seconds: '10',
 };
 
-export default function() {
+const Active = () => {
   return <ModalWindow title="Active pass" width="400px" height="300px">
     <GymPass
       src={gymA}
@@ -21,7 +21,7 @@ export default function() {
 
     <div>
       <div>
-        While countdown is active you have full access \n
+        While countdown is active you have full access
         to the gym facilities and classes.
       </div>
 
@@ -32,3 +32,5 @@ export default function() {
     </div>
   </ModalWindow>;
 }
+
+export default Radium(Active);

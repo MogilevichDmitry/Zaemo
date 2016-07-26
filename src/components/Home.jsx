@@ -30,19 +30,15 @@ class Home extends Component {
       searchBar: false,
       text: '',
     };
-
-    this.handleOpenSearchBar = this.handleOpenSearchBar.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleBackToAppBar = this.handleBackToAppBar.bind(this);
   }
 
-  handleOpenSearchBar() {
+  handleOpenSearchBar = () => {
     this.setState({
       searchBar: !this.state.searchBar,
     });
   }
 
-  handleSearch(e) {
+  handleSearch = (e) => {
     const text = e.target.value;
 
     this.setState({
@@ -50,7 +46,7 @@ class Home extends Component {
     });
   }
 
-  handleBackToAppBar() {
+  handleBackToAppBar = () => {
     this.setState({
       searchBar: !this.state.searchBar,
     })
@@ -413,4 +409,4 @@ const styles = {
   },
 };
 
-export default Home = Radium(Home);
+export default Radium(Home);

@@ -11,7 +11,7 @@ import GymDetailDesktop from './components/GymDetail/GymDetailDesktop.jsx';
 import GymDetailMobile from './components/GymDetail/GymDetailMobile.jsx';
 import GymDetail from './components/GymDetail/index.jsx';
 
-export default function() {
+export default () => {
   return <Route>
     <Route path="/" component={Home} />
     <Route path="login" component={Login} />

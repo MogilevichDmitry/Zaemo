@@ -3,7 +3,7 @@ import Radium from 'radium';
 import ZeamoIcon from '../../../../images/layout/ZeamoIcon.svg';
 import FlagButton from 'material-ui/FlatButton';
 
-function GymPass({ src, title, status, }) {
+const GymPass = ({ src, title, status, }) =>  {
   return <div>
     <div>
       <div>
@@ -131,4 +131,4 @@ const styles = {
   },
 };
 
-export default GymPass = Radium(GymPass);
+export default Radium(GymPass);

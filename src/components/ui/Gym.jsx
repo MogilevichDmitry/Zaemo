@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import ZeamoIcon from '../../images/layout/ZeamoIcon.svg';
 
-function Gym({ src, title, dayPass, expiresIn, useBy, expired }) {
+const Gym = ({ src, title, dayPass, expiresIn, useBy, expired }) => {
   return <div style={styles.gym}>
     <div style={styles.gymImageBox}>
       <img src={src} style={styles.gymImage}/>
@@ -191,4 +191,4 @@ const styles = {
   },
 };
 
-export default Gym = Radium(Gym);
+export default Radium(Gym);

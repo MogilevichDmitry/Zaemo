@@ -1,7 +1,7 @@
 import React  from 'react';
 import Radium from 'radium';
 
-function Tabs({ children, desktop }) {
+const Tabs = ({ children, desktop }) => {
 
  const style = desktop ? [styles, stylesDesktop] : styles;
 
@@ -21,4 +21,4 @@ const stylesDesktop = {
    width: 'auto',
 };
 
-export default Tabs = Radium(Tabs);
+export default Radium(Tabs);

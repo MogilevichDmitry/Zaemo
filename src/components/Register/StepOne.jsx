@@ -10,7 +10,7 @@ import Checkbox from 'material-ui/Checkbox';
 
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-function StepOne() {
+const StepOne = () => {
   return <div>
 
     <AppBar
@@ -128,4 +128,4 @@ const styles = {
   },
 };
 
-export default StepOne = Radium(StepOne);
+export default Radium(StepOne);

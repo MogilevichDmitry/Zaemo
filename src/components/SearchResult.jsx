@@ -12,7 +12,7 @@ import mapBackground from '../images/layout/homeMapBg.jpg';
 import gymA from '../images/content/gymA.jpg';
 import gymABC from '../images/content/gymABC.jpg';
 
-function SearchResult() {
+const SearchResult = () => {
   return  <div>
     <AppBar
       title="Pilates"
@@ -200,4 +200,4 @@ const styles = {
   }
 };
 
-export default SearchResult = Radium(SearchResult);
+export default Radium(SearchResult);

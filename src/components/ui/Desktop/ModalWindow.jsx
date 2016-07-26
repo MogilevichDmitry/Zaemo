@@ -1,9 +1,10 @@
 import React from 'react';
+import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import IconButton from 'material-ui/IconButton';
 
-export default function ModalWindow({ children, title, width, height }) {
+const ModalWindow =({ children, title, width, height }) => {
   return <div style={{width: width, height: height}}>
     <AppBar
       title={title}
@@ -17,3 +18,5 @@ export default function ModalWindow({ children, title, width, height }) {
     </div>
   </div>;
 }
+
+export default Radium(ModalWindow);

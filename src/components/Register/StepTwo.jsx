@@ -8,7 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 
-function StepTwo() {
+const StepTwo = () => {
   return <div>
 
     <AppBar
@@ -93,4 +93,4 @@ const styles = {
   },
 };
 
-export default StepTwo = Radium(StepTwo);
+export default Radium(StepTwo);
