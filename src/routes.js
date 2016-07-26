@@ -7,6 +7,7 @@ import RegisterStepOne from './components/Register/StepOne.jsx';
 import RegisterStepTwo from './components/Register/StepTwo.jsx';
 import RegisterStepThee from './components/Register/StepThree.jsx';
 import SearchResult from './components/SearchResult.jsx';
+import Modal from './components/ui/Desktop/ModalWindow.jsx';
 
 import GymDetail from './components/GymDetail.jsx';
 
@@ -17,6 +18,7 @@ export default () => {
     <Route path="home-filter" component={HomeFilter} />
     <Route path="search-result" component={SearchResult} />
     <Route path="gym-detail" component={GymDetail} />
+    <Route path="modal" component={Modal} />
 
     <Route path="register">
       <IndexRoute component={RegisterStepOne} />
