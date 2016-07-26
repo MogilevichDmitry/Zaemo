@@ -8,8 +8,8 @@ import ModalWindow from './Desktop/ModalWindow.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
 import ZeamoIcon from '../../images/layout/ZeamoIcon.svg';
 
-const Purchase = () => {
-  return <ModalWindow title="Purchase pass" width="400px" height="300px">
+const Purchase = ({ open, close }) => {
+  return <ModalWindow title="Purchase pass" open={open} close={close} >
     <div>
       <div>
         <h1>Payment Information</h1>
@@ -83,7 +83,7 @@ const Purchase = () => {
         </div>
       </div>
 
-      <RaisedButton label="Cancel" />
+      <RaisedButton label="Cancel" onClick={close} />
       <RaisedButton label="CHECKOUT" primary={true} />
     </div>
   </ModalWindow>;
