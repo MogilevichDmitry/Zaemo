@@ -1,7 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import ModalWindow from '../ModalWindow.jsx';
-import GymPass from './index.jsx';
+import GymPass from './GymPass.jsx';
 
 import gymA from '../../../../images/content/gymA.jpg';
 
@@ -12,10 +11,11 @@ const expiresIn = {
 };
 
 const Active = () => {
-  return <ModalWindow title="Active pass" width="400px" height="300px">
+  return <div>
     <GymPass
       src={gymA}
-      title="GymABC"
+      barTitle="Active pass"
+      gymTitle="GymA"
       status="active"
     />
 
@@ -30,7 +30,7 @@ const Active = () => {
         <div>{`${expiresIn.hours}h ${expiresIn.minutes}m ${expiresIn.seconds}s`}</div>
       </div>
     </div>
-  </ModalWindow>;
+  </div>;
 }
 
 export default Radium(Active);
