@@ -3,7 +3,10 @@ import Radium from 'radium';
 import ZeamoIcon from '../../images/layout/ZeamoIcon.svg';
 
 const Gym = ({ src, title, dayPass, expiresIn, useBy, expired }) => {
-  return <div style={styles.gym}>
+
+  const boxStyle = expired ? [styles.gym, styles.gymExpired] : styles.gym;
+
+  return <div style={boxStyle}>
     <div style={styles.gymImageBox}>
       <img src={src} style={styles.gymImage}/>
     </div>
@@ -11,26 +14,19 @@ const Gym = ({ src, title, dayPass, expiresIn, useBy, expired }) => {
       <div style={styles.gymInfoMain}>
         <div>
           <div style={styles.gymTitle}>{title}</div>
-          {
-            dayPass ?
-              <div style={styles.partner}>
-                <img src={ZeamoIcon} style={styles.zeamoIcon} />
-                <span style={styles.partnerDescription}>Zaemo Partner</span>
-              </div> : ''
-          }
+          <div style={styles.partner}>
+            <img src={ZeamoIcon} style={styles.zeamoIcon} />
+            <span style={styles.partnerDescription}>Zaemo Partner</span>
+          </div>
           {
             expiresIn || useBy || expired ?
-              <div style={styles.partner}>
-                <img src={ZeamoIcon} style={styles.zeamoIcon} />
-                <span style={styles.partnerDescription}>Zaemo Partner</span>
-                <div>Day pass</div>
-              </div> : ''
+                <div style={styles.dayPass}>Day pass</div> : ''
           }
         </div>
         <div style={styles.position}>
           <span style={styles.positionText}>2.1mi</span>
           <span style={styles.positionText}>Mission Valley</span>
-          <span style={[styles.positionText, styles.positionLink]}>Open now</span>
+          <span style={styles.positionText}>Open now</span>
         </div>
       </div>
       <div style={styles.gymInfoExtra}>
@@ -43,25 +39,25 @@ const Gym = ({ src, title, dayPass, expiresIn, useBy, expired }) => {
         }
         {
           expiresIn ?
-            <div style={styles.cost}>
-              <div style={styles.costDescription}>Expires in:</div>
-              <div style={styles.costAmount}>
+            <div>
+              <div style={styles.expiresDescription}>Expires in:</div>
+              <div style={styles.expiresAmount}>
                 {`${expiresIn.hours}h ${expiresIn.minutes}m ${expiresIn.seconds}s`}
               </div>
             </div> : ''
         }
         {
           useBy ?
-            <div style={styles.cost}>
-              <div style={styles.costDescription}>Use by:</div>
-              <div style={styles.costDescription}>{useBy}</div>
+            <div>
+              <div style={styles.useDescription}>Use by:</div>
+              <div style={styles.useAmount}>{useBy}</div>
             </div> : ''
         }
         {
           expired ?
-            <div style={styles.cost}>
-              <div style={styles.costDescription}>Expired:</div>
-              <div style={styles.costDescription}>{expired}</div>
+            <div>
+              <div style={styles.expiredDescription}>Expired:</div>
+              <div style={styles.expiredValue}>{expired}</div>
             </div> : ''
         }
         <div style={styles.feedback}>
@@ -77,7 +73,6 @@ const styles = {
   gym: {
     fontFamily: 'Ubuntu',
     width: '100%',
-
     '@media (min-width: 770px)': {
       background: 'white',
       marginBottom: '10px',
@@ -85,6 +80,9 @@ const styles = {
       display: 'flex',
       height: '125px',
     }
+  },
+  gymExpired: {
+    opacity: '0.6',
   },
   gymImageBox: {
     '@media (min-width: 770px)': {
@@ -101,7 +99,6 @@ const styles = {
     display: 'flex',
     flex: '1',
     padding: '2.5% 3% 1.5%',
-
     '@media (min-width: 770px)': {
       padding: '10px 15px',
     }
@@ -146,7 +143,7 @@ const styles = {
     color: '#666666',
   },
   position: {
-    fontSize: '14px',
+    fontSize: '13px',
     color: '#666666',
     fontWeight: '300',
   },
@@ -187,6 +184,56 @@ const styles = {
     '@media (min-width: 770px)': {
       flex: '0.83',
     }
+  },
+  expiresDescription: {
+    color: '#666666',
+    fontSize: '13px',
+    '@media (min-width: 770px)': {
+      display: 'inline-block',
+      marginRight: '5px',
+    }
+  },
+  expiresAmount: {
+    color: 'black',
+    fontWeight: '500',
+    fontSize: '17px',
+    '@media (min-width: 770px)': {
+      display: 'inline-block',
+    }
+  },
+  useDescription: {
+    color: '#666666',
+    fontSize: '13px',
+    '@media (min-width: 770px)': {
+      display: 'inline-block',
+      marginRight: '5px',
+    }
+  },
+  useAmount: {
+    fontSize: '13px',
+    color: '#999999',
+    '@media (min-width: 770px)': {
+      display: 'inline-block',
+    }
+  },
+  expiredDescription:{
+    color: '#666666',
+    fontSize: '13px',
+    '@media (min-width: 770px)': {
+      display: 'inline-block',
+      marginRight: '5px',
+    }
+  },
+  expiredValue: {
+    fontSize: '13px',
+    color: '#999999',
+    '@media (min-width: 770px)': {
+      display: 'inline-block',
+    }
+  },
+  dayPass: {
+    fontSize: '13px',
+    color: '#666666',
   },
 };
 
