@@ -113,14 +113,14 @@ const GymPass = ({ src, title, status, }) =>  {
 const styles = {
   wrapper: {
     paddingRight: '50px',
-    marginBottom: '10px',
+    marginBottom: '20px',
   },
   gym: {
     display: 'flex',
-    marginBottom: '25px',
+    marginBottom: '20px',
   },
   gymImageBox: {
-    width: '150px',
+    width: '140px',
   },
   gymImage: {
     width: '100%',
@@ -139,7 +139,7 @@ const styles = {
   },
   partner: {
     display: 'flex',
-    fontSize: '14px',
+    fontSize: '13px',
     color: '#666666',
     fontWeight: '500',
   },
@@ -167,7 +167,7 @@ const styles = {
     fontSize: '17px',
     color: 'black',
     fontWeight: '500',
-    marginBottom: '15px',
+    marginBottom: '10px',
   },
   options: {
     display: 'flex',
