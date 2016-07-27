@@ -46,7 +46,7 @@ const Gym = ({ src, title, dayPass, expiresIn, useBy, expired }) => {
             <div style={styles.cost}>
               <div style={styles.costDescription}>Expires in:</div>
               <div style={styles.costAmount}>
-                {`${expiresIn.hour}h ${expiresIn.minutes}m ${expiresIn.seconds}s`}
+                {`${expiresIn.hours}h ${expiresIn.minutes}m ${expiresIn.seconds}s`}
               </div>
             </div> : ''
         }
@@ -54,14 +54,14 @@ const Gym = ({ src, title, dayPass, expiresIn, useBy, expired }) => {
           useBy ?
             <div style={styles.cost}>
               <div style={styles.costDescription}>Use by:</div>
-              <div style={styles.costAmount}>{useBy}</div>
+              <div style={styles.costDescription}>{useBy}</div>
             </div> : ''
         }
         {
           expired ?
             <div style={styles.cost}>
               <div style={styles.costDescription}>Expired:</div>
-              <div style={styles.costAmount}>{expired}</div>
+              <div style={styles.costDescription}>{expired}</div>
             </div> : ''
         }
         <div style={styles.feedback}>

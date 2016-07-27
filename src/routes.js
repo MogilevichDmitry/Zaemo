@@ -10,6 +10,7 @@ import SearchResult from './components/SearchResult.jsx';
 import Modal from './components/ui/Desktop/ModalWindow.jsx';
 import Purchase from './components/ui/Desktop/Purchase.jsx';
 import Settings from './components/ui/Desktop/Settings.jsx';
+import MyPasses from './components/MyPasses.jsx';
 
 import GymDetail from './components/GymDetail.jsx';
 
@@ -23,6 +24,7 @@ export default () => {
     <Route path="modal" component={Modal} />
     <Route path="purchase" component={Purchase} />
     <Route path="settings" component={Settings} />
+    <Route path="my-passes" component={MyPasses} />
 
     <Route path="register">
       <IndexRoute component={RegisterStepOne} />
