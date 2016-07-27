@@ -17,19 +17,20 @@ import PassReadyMobile from './components/ui/Mobile/MyPasses/Ready.jsx'
 import PassActive from './components/ui/Desktop/MyPass/Active.jsx';
 import PassReady from './components/ui/Desktop/MyPass/Ready.jsx';
 import PassExpired from './components/ui/Desktop/MyPass/Expired.jsx';
-
 import GymDetail from './components/GymDetail.jsx';
+import WorkoutPreferences from './components/ui/Mobile/Settings/WorkoutPreferences.jsx';
+import PaymentInfo from './components/ui/Mobile/Settings/PaymentInfo.jsx';
+import PersonalInfo from './components/ui/Mobile/Settings/PersonalInfo.jsx';
 
 export default () => {
   return <Route>
     <Route path="/" component={Home} />
     <Route path="login" component={Login} />
     <Route path="home-filter" component={HomeFilter} />
-    <Route path="search-result" component={SearchResult} />x
+    <Route path="search-result" component={SearchResult} />
     <Route path="gym-detail" component={GymDetail} />
     <Route path="modal" component={Modal} />
     <Route path="purchase" component={Purchase} />
-    <Route path="settings" component={Settings} />
     <Route path="my-passes" component={MyPasses} />
     <Route path="pass-active" component={PassActive} />
     <Route path="pass-ready" component={PassReady} />
@@ -39,6 +40,13 @@ export default () => {
       <IndexRoute component={PassActiveMobile} />
       <Route path="ready" component={PassReadyMobile} />
       <Route path="expired" component={PassExpiredMobile} />
+    </Route>
+
+    <Route path="settings">
+      <IndexRoute component={Settings} />
+      <Route path="workout" component={WorkoutPreferences} />
+      <Route path="payment" component={PaymentInfo} />
+      <Route path="personal" component={PersonalInfo} />
     </Route>
 
     <Route path="register">

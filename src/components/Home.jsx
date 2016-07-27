@@ -61,7 +61,7 @@ class Home extends Component {
           {
             this.state.searchBar === false ?
               <AppBar
-                title="Zeam"
+                title="Zeamo"
                 style={styles.appBar}
                 iconElementLeft={
                   <IconButton>
