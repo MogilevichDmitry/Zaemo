@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Header from './Header.jsx';
 import AppBar from 'material-ui/AppBar';
+import { Link } from 'react-router';
 
 const Settings = () => {
   return <div>
@@ -105,20 +106,27 @@ const Settings = () => {
       />
 
       <div>
-        <div>
-          <h1>Edit your workout preferences</h1>
-          <div>Gym, swimming, yoga, spinning, pilates...</div>
-        </div>
 
-        <div>
-          <h1>Edit your personal information</h1>
-          <div>Name, email, phone number...</div>
-        </div>
+        <Link to="/settings/workout">
+          <div>
+            <h1>Edit your workout preferences</h1>
+            <div>Gym, swimming, yoga, spinning, pilates...</div>
+          </div>
+        </Link>
 
-        <div>
-          <h1>Edit your payment information</h1>
-          <div>Card number *******5555</div>
-        </div>
+        <Link to="/settings/personal">
+          <div>
+            <h1>Edit your personal information</h1>
+            <div>Name, email, phone number...</div>
+          </div>
+        </Link>
+
+        <Link to="/settings/payment">
+          <div>
+            <h1>Edit your payment information</h1>
+            <div>Card number *******5555</div>
+          </div>
+        </Link>
       </div>
     </div>
   </div>;
