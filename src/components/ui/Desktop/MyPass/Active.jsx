@@ -50,9 +50,8 @@ const styles = {
   countDown: {
     fontSize: '13px',
     color: '#999999',
-    flex: '0.5',
     margin: 'auto',
-    maxWidth: '300px',
+    maxWidth: '350px',
     textAlign: 'center',
   },
   countDownDescription: {

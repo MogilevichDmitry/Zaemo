@@ -113,11 +113,11 @@ const GymPass = ({ src, title, status, }) =>  {
 const styles = {
   wrapper: {
     paddingRight: '50px',
-    marginBottom: '15px',
+    marginBottom: '20px',
   },
   gym: {
     display: 'flex',
-    marginBottom: '25px',
+    marginBottom: '20px',
   },
   gymImageBox: {
     width: '140px',
