@@ -37,7 +37,7 @@ const GymPass = ({ src, barTitle, status, gymTitle }) =>  {
     <div>
       <div>
         <div>Type of pass</div>
-        <div>Day</div>
+        <div>Day pass</div>
       </div>
 
       <div>
