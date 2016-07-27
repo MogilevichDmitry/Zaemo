@@ -12,7 +12,7 @@ const expiresIn = {
 };
 
 const Active = () => {
-  return <ModalWindow title="Active pass">
+  return <ModalWindow title="Active pass" open={true}>
     <GymPass
       src={gym}
       title="GymABC"

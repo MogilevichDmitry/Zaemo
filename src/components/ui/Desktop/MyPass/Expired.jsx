@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import gym from '../../../../images/content/gymMyPassExpired.jpg';
 
 const Expired = () => {
-  return <ModalWindow title="Expired pass" width="400px" height="300px">
+  return <ModalWindow title="Expired pass" open={true}>
     <GymPass
       src={gym}
       title="GymA"

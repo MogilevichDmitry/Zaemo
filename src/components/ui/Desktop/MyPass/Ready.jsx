@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import gym from '../../../../images/content/gymMyPass.jpg';
 
 const Ready = () => {
-  return <ModalWindow title="New day pass" width="400px" height="300px">
+  return <ModalWindow title="New day pass" open={true}>
     <GymPass
       src={gym}
       title="GymAB"

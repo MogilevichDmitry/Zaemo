@@ -11,7 +11,7 @@ const ModalWindow =({ children, title, open, close }) => {
   return <div>
     <Dialog
       modal={true}
-      open={true}
+      open={open}
       autoScrollBodyContent={true}
       style={styles.dialog}
     >
