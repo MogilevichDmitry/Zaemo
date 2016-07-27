@@ -94,16 +94,16 @@ const styles = {
   },
   logoBox: {
     display: 'flex',
-    width: '150px',
+    width: '230px',
     margin: 'auto',
-    flex: '0.3',
+    flex: '0.28',
   },
   logo: {
     width: '100%',
   },
   tabs: {
     display: 'flex',
-    flex: '0.6',
+    flex: '0.65',
     flexDirection: 'column',
   },
   signInButtons: {
