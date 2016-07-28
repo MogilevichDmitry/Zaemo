@@ -2,7 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import FlatButton from 'material-ui/FlatButton';
 import Checkbox from 'material-ui/Checkbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -14,11 +13,11 @@ const PaymentInfo = () => {
     <AppBar
       title="Payment information"
       iconElementLeft={
-       <IconButton><NavigationClose /></IconButton>
-     }
+        <IconButton><NavigationClose /></IconButton>
+      }
       iconElementRight={
-       <FlatButton label="Step 2 of 3" />
-     }
+        <p>Step 2 of 3 </p>
+      }
     />
 
     <div>

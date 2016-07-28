@@ -2,7 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import FlatButton from 'material-ui/FlatButton';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -18,7 +17,7 @@ const SelectPass = () => {
        <IconButton><NavigationClose /></IconButton>
      }
      iconElementRight={
-       <FlatButton label="Step 1 of 3" />
+       <p>Step 1 of 3 </p>
      }
    />
 

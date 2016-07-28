@@ -22,6 +22,7 @@ import PaymentInfo from './components/Settings/PaymentInfo.jsx';
 import PersonalInfo from './components/Settings/PersonalInfo.jsx';
 import PurchaseSelectPass from './components/Purchase/SelectPass.jsx';
 import PurchasePaymentInfo from './components/Purchase/PaymentInfo.jsx';
+import PurchaseCheckout from './components/Purchase/Checkout.jsx';
 
 export default () => {
   return <Route>
@@ -52,6 +53,7 @@ export default () => {
     <Route path="purchase">
       <IndexRoute component={PurchaseSelectPass} />
       <Route path="payment" component={PurchasePaymentInfo} />
+      <Route path="checkout" component={PurchaseCheckout} />
     </Route>
 
     <Route path="register">
