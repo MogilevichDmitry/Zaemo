@@ -10,11 +10,7 @@ const GymPass = ({ src, barTitle, status, gymTitle }) =>  {
   return <div>
     <AppBar
       title={barTitle}
-      iconElementLeft={
-        <IconButton>
-          <NavigationClose color={'#4877f9'} />
-        </IconButton>
-      }
+      iconElementLeft={<IconButton><NavigationClose color={'#4877f9'} /></IconButton>}
       zDepth={0}
       style={styles.appBar}
     />
