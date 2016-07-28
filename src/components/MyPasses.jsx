@@ -1,12 +1,15 @@
 import React from 'react';
 import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import Header from './ui/Desktop/Header.jsx';
 import Gym from './ui/Gym.jsx';
 import GymMobile from './ui/Mobile/Gym.jsx';
 import {Tabs, Tab} from 'material-ui/Tabs';
+
+import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 
 import gymReady from '../images/content/gymMyPass.jpg';
 import gymExpired from '../images/content/gymMyPassExpired.jpg';
@@ -20,7 +23,8 @@ const expiresIn = {
 
 const MyPasses = () => {
   return (
-    <div style={styles.wrapper}>
+    <div>
+    <div style={styles.wrapperDesktop}>
       <Header />
 
       <div style={styles.main}>
@@ -41,19 +45,30 @@ const MyPasses = () => {
           <Gym src={gymExpired} title="Gym ACD" expired="2 days ago" />
         </div>
       </div>
-      {/*
-       <AppBar title="My Passes" />
-       <Tabs style={{background: 'blue'}}>
-       <Tab label="New">
-       <div style={{background: 'white'}}>
-       <GymMobile src={gymA} title="Gym A" />
-       <GymMobile src={gymA} title="Aqua Gym" partner={false} />
-       </div>
-       </Tab>
-       <Tab label="Active" />
-       <Tab label="Expired" />
-       </Tabs>
-      */}
+    </div>
+
+    <div style={styles.wrapperMobile}>
+      <AppBar
+        title="My Passes"
+        style={styles.appBar}
+        iconElementLeft={<IconButton><MenuIcon color={'#4877f9'} /></IconButton>}
+        zDepth={0}
+      />
+        <Tabs style={styles.tabs}>
+          <Tab label="New">
+            <div style={styles.tabWrapper}>
+              <div style={styles.gymBox}>
+                <GymMobile src={gymReady} title="Gym A" />
+              </div>
+              <div style={styles.gymBox}>
+                <GymMobile src={gymActive} title="Aqua Gym" partner={false} />
+              </div>
+            </div>
+          </Tab>
+          <Tab label="Active" />
+          <Tab label="Expired" />
+        </Tabs>
+      </div>
     </div>
   );
 };
@@ -75,11 +90,14 @@ const styles = {
       margin: '0 auto',
     },
   },
-  wrapper: {
+  wrapperDesktop: {
     background: '#f2f2f2',
     '@media (min-width: 770px)': {
       minHeight: '100vh',
       paddingBottom: '40px',
+    },
+    '@media (max-width: 770px)': {
+      display: 'none',
     },
   },
   changer: {
@@ -92,6 +110,26 @@ const styles = {
   },
   icon: {
     fill: '#4877f9',
+  },
+  wrapperMobile: {
+    '@media (min-width: 770px)': {
+      display: 'none',
+    },
+  },
+  appBar: {
+    backgroundColor: '#162233',
+  },
+  tabs: {
+    backgroundColor: '#162233',
+    borderWidth: '4px',
+  },
+  tabWrapper: {
+    background: 'white',
+    padding: '0 2%',
+  },
+  gymBox: {
+    padding: '15px 1%',
+    borderBottom: '1px solid #d9d9d9',
   },
 };
 

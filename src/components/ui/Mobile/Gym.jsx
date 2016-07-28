@@ -6,33 +6,40 @@ import LocationOn from 'material-ui/svg-icons/communication/location-on';
 
 const Gym = ({ src, title, partner }) => {
   return <div style={styles.gym}>
-    <div style={styles.gymImageBox}>
-      <img src={src} style={styles.gymImage}/>
+    <div style={styles.imageBox}>
+      <img src={src} style={styles.image}/>
     </div>
 
-    <div>
-      <div>
-        <div style={styles.gymTitle}>{title}</div>
+    <div style={styles.infoBox}>
+      <div style={styles.boxColumn}>
+      <div style={styles.boxRow}>
+        <div style={styles.title}>{title}</div>
         <div>Day pass</div>
       </div>
-      
-      {
-        partner === false ?
-          '' :
-          <div style={styles.partner}>
-            <img src={ZeamoIcon} style={styles.zeamoIcon} />
-            <span style={styles.partnerDescription}>Zaemo Partner</span>
-          </div>
-      }
 
-      <div style={styles.feedback}>
-        <LocationOn />
-        <div>5555 Graphes Rd, San Diego, CA 92510</div>
+        <div>
+          {
+            partner === false ?
+              '' :
+              <div style={styles.partner}>
+                <img src={ZeamoIcon} style={styles.zeamoIcon} />
+                <span>Zaemo Partner</span>
+              </div>
+          }
+
+          <div style={styles.location}>
+            <LocationOn style={styles.locationIcon} />
+            <span style={styles.locationDecription}>5555 Graphes Rd, San Diego, CA 92510</span>
+          </div>
+        </div>
       </div>
 
-      <div>
+      <div style={styles.boxRow}>
         <span>2.1mi</span>
-        <span>Use by: 6/2/2017</span>
+        <span>
+          <span>Use by: </span>
+          <span style={styles.date}>6/2/2017</span>
+        </span>
       </div>
     </div>
   </div>
@@ -42,116 +49,72 @@ const styles = {
   gym: {
     fontFamily: 'Ubuntu',
     width: '100%',
-
-    '@media (min-width: 770px)': {
-      background: 'white',
-      marginBottom: '10px',
-      boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      display: 'flex',
-      height: '125px',
-    }
+    display: 'flex',
+    justifyContent: 'space-between',
   },
-  gymImageBox: {
-    '@media (min-width: 770px)': {
-      width:'181px',
-    }
+  imageBox: {
+   flex: '0.25',
   },
-  gymImage: {
+  image: {
     width: '100%',
-    '@media (min-width: 770px)': {
-      height:'125px',
-    }
   },
-  gymInfoBox: {
+  infoBox: {
     display: 'flex',
-    flex: '1',
-    padding: '2.5% 3% 1.5%',
-
-    '@media (min-width: 770px)': {
-      padding: '10px 15px',
-    }
-  },
-  gymInfoMain: {
-    display: 'flex',
+    flex: '0.715',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    flex: '1',
   },
-  gymInfoExtra: {
+  boxRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    fontSize: '13px',
+    color: '#999999',
+  },
+  boxColumn: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    textAlign: 'right',
-    color: '#666666',
-
-    '@media (max-width: 770px)':{
-      justifyContent: 'flex-end',
-    },
   },
-  gymTitle: {
-    marginBottom: '2%',
-    color: '#031021',
+  title: {
+    marginBottom: '6px',
+    color: '#4d4d4d',
     fontWeight: '500',
-    fontSize: '18px',
+    fontSize: '17px',
   },
   partner: {
-    fontSize: '14px',
-    marginBottom: '2%',
     display: 'flex',
-    '@media (min-width: 770px)':{
-      marginBottom: '6px',
-    },
+    fontSize: '13px',
+    marginBottom: '4px',
+    color: '#666666',
   },
   zeamoIcon: {
     width: '14px',
     height: '14px',
     margin: 'auto 1.5% auto 0',
   },
-  partnerDescription: {
-    color: '#666666',
+  location: {
+    display: 'flex',
+    fontSize: '13px',
+    color: '#999999',
+    marginBottom: '4px',
   },
-  position: {
-    fontSize: '14px',
-    color: '#666666',
-    fontWeight: '300',
+  locationIcon: {
+    fill: '#4877f9',
+    width: '17px',
+    height: '17px',
+    margin: 'auto 1% auto -1.2px',
   },
-  positionText: {
-    marginRight: '10px',
-    '@media (max-width: 1024px)':{
-      marginRight: '5px',
-    },
-  },
-  costDescription: {
-    fontSize: '14px',
-    fontWeight: '300',
-
-    '@media (min-width: 770px)': {
-      display: 'inline-block',
-      marginRight: '5px',
+  locationDecription: {
+    margin: 'auto 0',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    '@media (max-width: 370px)': {
+      width: '180px',
     }
   },
-  costAmount: {
-    color: 'black',
-    fontSize: '24px',
+  date: {
+    color: '#4d4d4d',
     fontWeight: '500',
-
-    '@media (min-width: 770px)': {
-      display: 'inline-block',
-    },
-  },
-  feedback: {
-    fontSize: '14px',
-    '@media (max-width: 970px)': {
-      display: 'none',
-    },
-  },
-  feedbackNumber: {
-    marginBottom: '6px',
-  },
-  contentPasses: {
-    '@media (min-width: 770px)': {
-      flex: '0.83',
-    }
   },
 };
 
