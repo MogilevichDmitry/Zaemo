@@ -12,18 +12,11 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 const StepOne = () => {
   return <div>
-
     <AppBar
       style={styles.appBar}
       title="Step 1 of 3"
-      iconElementLeft={
-        <IconButton>
-          <NavigationClose color={'#4877f9'} />
-        </IconButton>
-      }
-      iconElementRight={
-        <FlatButton label="next" style={styles.appBarButton} />
-      }
+      iconElementLeft={<IconButton><NavigationClose color={'#4877f9'} /></IconButton>}
+      iconElementRight={<FlatButton label="next" style={styles.appBarButton} />}
     />
 
     <div style={styles.personalInfo}>
@@ -57,6 +50,7 @@ const StepOne = () => {
         floatingLabelStyle={styles.fieldLabel}
         underlineStyle={styles.underline}
       />
+
       <div style={styles.fieldsBox}>
         <TextField
           floatingLabelText="Birthday"
@@ -78,6 +72,7 @@ const StepOne = () => {
           <MenuItem primaryText="Female" />
         </SelectField>
       </div>
+
       <Checkbox
         label="Receive email updates"
         style={styles.checkbox}
@@ -85,7 +80,7 @@ const StepOne = () => {
       />
     </div>
   </div>;
-}
+};
 
 const styles = {
   appBar: {

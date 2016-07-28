@@ -22,9 +22,7 @@ const HomeFilter = () => {
           <NavigationClose color={'#4877f9'} />
         </IconButton>
       }
-      iconElementRight={
-        <FlatButton label="Apply" style={styles.appBarButton} />
-      }
+      iconElementRight={<FlatButton label="Apply" style={styles.appBarButton} />}
     />
 
     <div style={styles.filter}>
@@ -122,26 +120,106 @@ const HomeFilter = () => {
           <Tab label="Activities" style={styles.tabTitle}>
             <div>
               <div style={styles.checkboxGroup}>
-                <Checkbox label="Gym" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Swimming" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Yoga" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Spinning" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Kickboxing" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Boot Camp" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Dancing" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Pilates" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Fencing" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Squash" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Zumba" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Physiotherapy" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Barre" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Rock Climbng" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Tennis" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Personal Training" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Cycling" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Martial Arts" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Basketball" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
-                <Checkbox label="Soccer" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
+                <Checkbox
+                  label="Gym"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Swimming"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Yoga"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Spinning"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Kickboxing"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Boot Camp"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Dancing"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Pilates"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Fencing"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Squash"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Zumba"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Physiotherapy"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Barre"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Rock Climbng"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Tennis"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Personal Training"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Cycling"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Martial Arts"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Basketball"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
+                <Checkbox
+                  label="Soccer"
+                  style={styles.checkbox}
+                  iconStyle={styles.checkboxIcon}
+                />
               </div>
               <FlatButton style={styles.button} label="Clear All" primary={true} />
             </div>
@@ -150,9 +228,8 @@ const HomeFilter = () => {
         </Tabs>
       </div>
     </div>
-
   </div>;
-}
+};
 
 const styles = {
   appBar: {

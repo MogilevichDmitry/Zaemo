@@ -29,7 +29,6 @@ const ModalWindow =({ children, title, open, close }) => {
         {children}
       </div>
     </Dialog>
-
   </div>;
 }
 

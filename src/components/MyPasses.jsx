@@ -22,8 +22,7 @@ const expiresIn = {
 };
 
 const MyPasses = () => {
-  return (
-    <div>
+  return <div>
     <div style={styles.wrapperDesktop}>
       <Header />
 
@@ -54,23 +53,22 @@ const MyPasses = () => {
         iconElementLeft={<IconButton><MenuIcon color={'#4877f9'} /></IconButton>}
         zDepth={0}
       />
-        <Tabs style={styles.tabs}>
-          <Tab label="New">
-            <div style={styles.tabWrapper}>
-              <div style={styles.gymBox}>
-                <GymMobile src={gymReady} title="Gym A" />
-              </div>
-              <div style={styles.gymBox}>
-                <GymMobile src={gymActive} title="Aqua Gym" partner={false} />
-              </div>
+      <Tabs style={styles.tabs}>
+        <Tab label="New">
+          <div style={styles.tabWrapper}>
+            <div style={styles.gymBox}>
+              <GymMobile src={gymReady} title="Gym A" />
             </div>
-          </Tab>
-          <Tab label="Active" />
-          <Tab label="Expired" />
-        </Tabs>
-      </div>
+            <div style={styles.gymBox}>
+              <GymMobile src={gymActive} title="Aqua Gym" partner={false} />
+            </div>
+          </div>
+        </Tab>
+        <Tab label="Active" />
+        <Tab label="Expired" />
+      </Tabs>
     </div>
-  );
+  </div>;
 };
 
 const styles = {

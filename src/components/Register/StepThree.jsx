@@ -13,11 +13,7 @@ const StepThree = () => {
     <AppBar
       style={styles.appBar}
       title="Step 3 of 3"
-      iconElementLeft={
-        <IconButton>
-          <NavigationClose color={'#4877f9'} />
-        </IconButton>
-      }
+      iconElementLeft={<IconButton><NavigationClose color={'#4877f9'} /></IconButton>}
     />
 
     <div style={styles.conditions}>
@@ -31,19 +27,21 @@ const StepThree = () => {
         In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
         Integer tincidunt. Cras dapibu
       </div>
+
       <Checkbox
         label="I read and accept the terms & conditions"
         style={styles.checkbox}
         iconStyle={styles.checkboxIcon}
       />
     </div>
+
     <RaisedButton
       label="confirm"
       primary={true}
       style={styles.button}
     />
   </div>;
-}
+};
 
 const styles = {
   stepThree: {

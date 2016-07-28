@@ -13,12 +13,8 @@ const SelectPass = () => {
  return <div>
    <AppBar
      title="Select a pass"
-     iconElementLeft={
-       <IconButton><NavigationClose /></IconButton>
-     }
-     iconElementRight={
-       <p>Step 1 of 3 </p>
-     }
+     iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+     iconElementRight={<p>Step 1 of 3 </p>}
    />
 
    <SelectField>
@@ -66,7 +62,7 @@ const SelectPass = () => {
    </div>
    <RaisedButton label="Purchase" primary={true} fullWidth={true} />
  </div>
-}
+};
 
 const styles = {
   zeamoIcon: {

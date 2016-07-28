@@ -5,8 +5,8 @@ import Tab from '../components/ui/Tab.jsx';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import ZeamoLogo from '../images/layout/ZeamoLogo.svg';
+
 import Person from 'material-ui/svg-icons/social/person';
 import Lock from 'material-ui/svg-icons/action/lock';
 
@@ -46,27 +46,15 @@ const Login = () => {
               />
             </div>
             <div style={styles.signInButtons}>
-              <FlatButton
-                label="forgot password?"
-                primary={true}
-                style={styles.firstButton}
-              />
-              <RaisedButton
-                label="login"
-                primary={true}
-                style={styles.signInButton}
-              />
-              <FlatButton
-                label="skip"
-                primary={true}
-                style={styles.signInButton}
-              />
+              <FlatButton label="forgot password?" primary={true} style={styles.firstButton} />
+              <RaisedButton label="login" primary={true} style={styles.signInButton} />
+              <FlatButton label="skip" primary={true} style={styles.signInButton} />
             </div>
           </div>
       </div>
     </div>
   </div>;
-}
+};
 
 const styles = {
   login: {

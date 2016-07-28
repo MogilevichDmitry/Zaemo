@@ -6,7 +6,7 @@ const Tab = ({ label, active, desktop }) => {
   style = active ? [style, styles.tabActive] : style;
 
   return <div style={style}>{label}</div>;
-}
+};
 
 const styles = {
   tab: {

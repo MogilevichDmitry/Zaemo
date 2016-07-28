@@ -10,18 +10,11 @@ import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 
 const StepTwo = () => {
   return <div>
-
     <AppBar
       style={styles.appBar}
       title="Step 2 of 3"
-      iconElementLeft={
-        <IconButton>
-          <ArrowBack color={'#4877f9'} />
-        </IconButton>
-      }
-      iconElementRight={
-        <FlatButton label="skip" style={styles.appBarButton} />
-      }
+      iconElementLeft={<IconButton><ArrowBack color={'#4877f9'} /></IconButton>}
+      iconElementRight={<FlatButton label="skip" style={styles.appBarButton} />}
     />
 
     <div style={styles.workoutPreferences}>
@@ -57,7 +50,7 @@ const StepTwo = () => {
       style={styles.button}
     />
   </div>;
-}
+};
 
 const styles = {
   appBar: {

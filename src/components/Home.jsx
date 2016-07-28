@@ -32,13 +32,13 @@ class Home extends Component {
     };
   }
 
-  handleOpenSearchBar = () => {
+  handleOpenSearchBar() {
     this.setState({
       searchBar: !this.state.searchBar,
     });
   }
 
-  handleSearch = (e) => {
+  handleSearc(e) {
     const text = e.target.value;
 
     this.setState({
@@ -46,216 +46,207 @@ class Home extends Component {
     });
   }
 
-  handleBackToAppBar = () => {
+  handleBackToAppBar() {
     this.setState({
       searchBar: !this.state.searchBar,
     })
   }
 
   render() {
-    return (
-      <div style={styles.home}>
-        <Header />
+    return <div style={styles.home}>
+      <Header />
 
-        <div style={styles.headerMobile}>
-          {
-            this.state.searchBar === false ?
-              <AppBar
-                title="Zeamo"
-                style={styles.appBar}
-                iconElementLeft={
-                  <IconButton>
-                    <MenuIcon color={'#4877f9'} />
-                  </IconButton>
-                }
+      <div style={styles.headerMobile}>
+        {
+          this.state.searchBar === false ?
+            <AppBar
+              title="Zeamo"
+              style={styles.appBar}
+              iconElementLeft={
+                <IconButton>
+                  <MenuIcon color={'#4877f9'} />
+                </IconButton>
+              }
+            >
+              <div style={styles.appBarRightBox}>
+                <FilterListIcon color={'#4877f9'} />
+                <SearchIcon color={'#4877f9'} onClick={this.handleOpenSearchBar} />
+              </div>
+            </AppBar> :
+            <AppBar
+              style={styles.appBarSearch}
+              iconElementLeft={
+                <IconButton onClick={this.handleBackToAppBar}>
+                  <ArrowBack color={'#4877f9'} />
+                </IconButton>
+              }
+            >
+              <TextField
+                style={styles.appBarSearchInput}
+                id="search"
+                hintText="search"
+                hintStyle={styles.inputHintStyle}
+                onChange={this.handleSearch}
+              />
+              <NavigationClose style={styles.appBarSearchClose} color={'#4877f9'} onClick={this.handleBackToAppBar} />
+            </AppBar>
+        }
+
+        {
+          this.state.text.length > 0 ?
+            <List>
+              <Link to="/search-result" style={styles.listLink}>
+                <ListItem
+                  primaryText={<p style={styles.listMainInfo}>Pilates Club</p>}
+                  secondaryText="5222 Peaches Rd, San Diego CA, 92141"
+                  leftIcon={<SearchIcon />}
+                />
+              </Link>
+
+              <Link to="/search-result" style={styles.listLink}>
+                <ListItem
+                  primaryText={<p style={styles.listMainInfo}>Pilates Club</p>}
+                  secondaryText="8451 Lychee Rd, San Diego CA, 93589"
+                  leftIcon={<SearchIcon />}
+                />
+              </Link>
+
+              <Link to="/search-result" style={styles.listLink}>
+                <ListItem
+                  primaryText={<p style={styles.listMainInfo}>Pilates Club</p>}
+                  secondaryText="3488 Grapes Rd, San Diego CA, 9741"
+                  leftIcon={<SearchIcon />}
+                />
+              </Link>
+            </List> : ''
+        }
+      </div>
+
+      <div style={styles.main}>
+        <div style={styles.content}>
+          <div style={styles.contentFilter}>
+            <div style={styles.contentFilterBox}>
+              <h1 style={styles.filterFirstTitle}>Filter by</h1>
+
+              <SelectField
+                floatingLabelText="Search radius"
+                floatingLabelFixed={true}
+                floatingLabelStyle={styles.fieldLabel}
+                underlineStyle={styles.underline}
+                iconStyle={styles.selectFieldIcon}
+                style={styles.filterField}
               >
-                <div style={styles.appBarRightBox}>
-                  <FilterListIcon color={'#4877f9'} />
-                  <SearchIcon color={'#4877f9'} onClick={this.handleOpenSearchBar} />
-                </div>
-              </AppBar> :
-              <AppBar
-                style={styles.appBarSearch}
-                iconElementLeft={
-                  <IconButton onClick={this.handleBackToAppBar}>
-                    <ArrowBack color={'#4877f9'} />
-                  </IconButton>
-                }
+                <MenuItem primaryText="3 miles" />
+                <MenuItem primaryText="5 miles" />
+                <MenuItem primaryText="8 miles" />
+                <MenuItem primaryText="6 miles" />
+                <MenuItem primaryText="9 miles" />
+                <MenuItem primaryText="11 miles" />
+              </SelectField>
+
+              <TextField
+                floatingLabelText="Zipcode"
+                floatingLabelFixed={true}
+                floatingLabelStyle={styles.fieldLabel}
+                underlineStyle={styles.underline}
+                style={styles.filterField}
+              />
+
+              <SelectField
+                floatingLabelText="State"
+                floatingLabelFixed={true}
+                floatingLabelStyle={styles.fieldLabel}
+                underlineStyle={styles.underline}
+                iconStyle={styles.selectFieldIcon}
+                style={styles.filterField}
               >
-                <TextField
-                  style={styles.appBarSearchInput}
-                  id="search"
-                  hintText="search"
-                  hintStyle={styles.inputHintStyle}
-                  onChange={this.handleSearch}
-                />
-                <NavigationClose style={styles.appBarSearchClose} color={'#4877f9'} onClick={this.handleBackToAppBar} />
-              </AppBar>
-          }
-
-          {
-            this.state.text.length > 0 ?
-              <List>
-                <Link to="/search-result" style={styles.listLink}>
-                  <ListItem
-                    primaryText={
-                    <p style={styles.listMainInfo}>Pilates Club</p>
-                  }
-                    secondaryText="5222 Peaches Rd, San Diego CA, 92141"
-                    leftIcon={<SearchIcon />}
-                  />
-                </Link>
-
-                <Link to="/search-result" style={styles.listLink}>
-                  <ListItem
-                    primaryText={
-                      <p style={styles.listMainInfo}>Pilates Club</p>
-                    }
-                    secondaryText="8451 Lychee Rd, San Diego CA, 93589"
-                    leftIcon={<SearchIcon />}
-                  />
-                </Link>
-
-                <Link to="/search-result" style={styles.listLink}>
-                  <ListItem
-                    primaryText={
-                      <p style={styles.listMainInfo}>Pilates Club</p>
-                    }
-                    secondaryText="3488 Grapes Rd, San Diego CA, 9741"
-                    leftIcon={<SearchIcon />}
-                  />
-                </Link>
-              </List> : ''
-          }
-        </div>
-
-        <div style={styles.main}>
-          <div style={styles.content}>
-            <div style={styles.contentFilter}>
-              <div style={styles.contentFilterBox}>
-                <h1 style={styles.filterFirstTitle}>Filter by</h1>
-
-                <SelectField
-                  floatingLabelText="Search radius"
-                  floatingLabelFixed={true}
-                  floatingLabelStyle={styles.fieldLabel}
-                  underlineStyle={styles.underline}
-                  iconStyle={styles.selectFieldIcon}
-                  style={styles.filterField}
-                >
-                  <MenuItem primaryText="3 miles" />
-                  <MenuItem primaryText="5 miles" />
-                  <MenuItem primaryText="8 miles" />
-                  <MenuItem primaryText="6 miles" />
-                  <MenuItem primaryText="9 miles" />
-                  <MenuItem primaryText="11 miles" />
-                </SelectField>
-
-                <TextField
-                  floatingLabelText="Zipcode"
-                  floatingLabelFixed={true}
-                  floatingLabelStyle={styles.fieldLabel}
-                  underlineStyle={styles.underline}
-                  style={styles.filterField}
-                />
-
-                <SelectField
-                  floatingLabelText="State"
-                  floatingLabelFixed={true}
-                  floatingLabelStyle={styles.fieldLabel}
-                  underlineStyle={styles.underline}
-                  iconStyle={styles.selectFieldIcon}
-                  style={styles.filterField}
-                >
-                  <MenuItem primaryText="CO" />
-                  <MenuItem primaryText="FL" />
-                  <MenuItem primaryText="HI" />
-                  <MenuItem primaryText="WY" />
-                  <MenuItem primaryText="CA" />
-                </SelectField>
-              </div>
-
-              <div style={styles.contentFilterBox}>
-                <h1 style={styles.title}>Price</h1>
-
-                <RadioButtonGroup name="shipName" defaultSelected="not_checked">
-                  <RadioButton
-                    label="Under $25"
-                    value="$25"
-                    style={styles.radioButton}
-                    iconStyle={styles.radioIcon}
-                  />
-                  <RadioButton
-                    label="$25 to $50"
-                    value="$25to$50"
-                    style={styles.radioButton}
-                    iconStyle={styles.radioIcon}
-                  />
-                  <RadioButton
-                    label="$50 to $100"
-                    value="$50to$100"
-                    style={styles.radioButton}
-                    iconStyle={styles.radioIcon}
-                  />
-                  <RadioButton
-                    label="$100 to $200"
-                    value="$100to$200"
-                    style={styles.radioButton}
-                    iconStyle={styles.radioIcon}
-                  />
-                  <RadioButton
-                    label="$200 & above"
-                    value="$200&above"
-                    style={styles.radioButton}
-                    iconStyle={styles.radioIcon}
-                  />
-                </RadioButtonGroup>
-              </div>
-
-              <div style={styles.contentFilterBox}>
-                <h1 style={styles.title}>Activities</h1>
-
-                <Checkbox
-                  label="Gym"
-                  style={styles.checkbox}
-                  iconStyle={styles.checkboxIcon}
-                />
-                <Checkbox
-                  label="Swimming"
-                  style={styles.checkbox}
-                  iconStyle={styles.checkboxIcon}
-                />
-                <Checkbox
-                  label="Yoga"
-                  style={styles.checkbox}
-                  iconStyle={styles.checkboxIcon}
-                />
-                <Checkbox
-                  label="Spinning"
-                  style={styles.checkbox}
-                  iconStyle={styles.checkboxIcon}
-                />
-                <Checkbox
-                  label="Kickboxing"
-                  style={styles.checkbox}
-                  iconStyle={styles.checkboxIcon}
-                />
-              </div>
+                <MenuItem primaryText="CO" />
+                <MenuItem primaryText="FL" />
+                <MenuItem primaryText="HI" />
+                <MenuItem primaryText="WY" />
+                <MenuItem primaryText="CA" />
+              </SelectField>
             </div>
-            <div style={styles.contentPasses}>
-              <div style={styles.map}></div>
-              
-              <Gym src={gymA} title="Gym A" dayPass="$15.00" />
-              <Gym src={gymABC} title="Gym ABCDCD" dayPass="$15.00" />
-              <Gym src={gymA} title="Gym A" dayPass="$15.00" />
+
+            <div style={styles.contentFilterBox}>
+              <h1 style={styles.title}>Price</h1>
+
+              <RadioButtonGroup name="shipName" defaultSelected="not_checked">
+                <RadioButton
+                  label="Under $25"
+                  value="$25"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$25 to $50"
+                  value="$25to$50"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$50 to $100"
+                  value="$50to$100"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$100 to $200"
+                  value="$100to$200"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+                <RadioButton
+                  label="$200 & above"
+                  value="$200&above"
+                  style={styles.radioButton}
+                  iconStyle={styles.radioIcon}
+                />
+              </RadioButtonGroup>
+            </div>
+
+            <div style={styles.contentFilterBox}>
+              <h1 style={styles.title}>Activities</h1>
+
+              <Checkbox
+                label="Gym"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Swimming"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Yoga"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Spinning"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
+              <Checkbox
+                label="Kickboxing"
+                style={styles.checkbox}
+                iconStyle={styles.checkboxIcon}
+              />
             </div>
           </div>
-        </div>
+          <div style={styles.contentPasses}>
+            <div style={styles.map}></div>
 
+            <Gym src={gymA} title="Gym A" dayPass="$15.00" />
+            <Gym src={gymABC} title="Gym ABCDCD" dayPass="$15.00" />
+            <Gym src={gymA} title="Gym A" dayPass="$15.00" />
+          </div>
+        </div>
       </div>
-    );
+    </div>;
   }
-}
+};
 
 const styles = {
   main: {
@@ -282,11 +273,9 @@ const styles = {
   },
   home: {
     background: '#f2f2f2',
-
     '@media (min-width: 770px)': {
       paddingBottom: '40px',
     },
-
     '@media (max-width: 770px)': {
       background: 'white',
     },

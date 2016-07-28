@@ -12,12 +12,8 @@ const PaymentInfo = () => {
   return <div>
     <AppBar
       title="Payment information"
-      iconElementLeft={
-        <IconButton><NavigationClose /></IconButton>
-      }
-      iconElementRight={
-        <p>Step 2 of 3 </p>
-      }
+      iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+      iconElementRight={<p>Step 2 of 3 </p>}
     />
 
     <div>
@@ -53,6 +49,6 @@ const PaymentInfo = () => {
 
     <RaisedButton label="Checkout" primary={true} fullWidth={true} />
   </div>
-}
+};
 
 export default Radium(PaymentInfo);

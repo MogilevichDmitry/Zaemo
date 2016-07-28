@@ -43,7 +43,7 @@ const Gym = ({ src, title, partner }) => {
       </div>
     </div>
   </div>
-}
+};
 
 const styles = {
   gym: {
