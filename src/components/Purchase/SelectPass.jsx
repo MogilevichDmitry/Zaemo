@@ -29,7 +29,7 @@ const SelectPass = () => {
    </SelectField>
 
    <div>
-     <h1>Pass information</h1>
+     <div>Pass information</div>
      <div>
        <div>
          <div>Duration of pass</div>

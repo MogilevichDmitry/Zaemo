@@ -20,7 +20,8 @@ import GymDetail from './components/GymDetail.jsx';
 import WorkoutPreferences from './components/Settings/WorkoutPreferences.jsx';
 import PaymentInfo from './components/Settings/PaymentInfo.jsx';
 import PersonalInfo from './components/Settings/PersonalInfo.jsx';
-import SelectPass from './components/Purchase/SelectPass.jsx';
+import PurchaseSelectPass from './components/Purchase/SelectPass.jsx';
+import PurchasePaymentInfo from './components/Purchase/PaymentInfo.jsx';
 
 export default () => {
   return <Route>
@@ -49,7 +50,8 @@ export default () => {
     </Route>
 
     <Route path="purchase">
-      <IndexRoute component={SelectPass} />
+      <IndexRoute component={PurchaseSelectPass} />
+      <Route path="payment" component={PurchasePaymentInfo} />
     </Route>
 
     <Route path="register">

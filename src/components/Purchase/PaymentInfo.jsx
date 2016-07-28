@@ -2,22 +2,23 @@ import React from 'react';
 import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import FlatButton from 'material-ui/FlatButton';
+import Checkbox from 'material-ui/Checkbox';
+import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import { Link } from 'react-router';
+
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 const PaymentInfo = () => {
   return <div>
     <AppBar
-      style={styles.appBar}
-      title="Workout preferences"
+      title="Payment information"
       iconElementLeft={
-        <Link to="/settings"><IconButton><ArrowBack color={'#4877f9'} /></IconButton></Link>
-      }
+       <IconButton><NavigationClose /></IconButton>
+     }
       iconElementRight={
-        <FlatButton label="Save" style={styles.appBarButton} />
-      }
+       <FlatButton label="Step 2 of 3" />
+     }
     />
 
     <div>
@@ -47,17 +48,12 @@ const PaymentInfo = () => {
         floatingLabelText="Exp. date"
         floatingLabelFixed={true}
       />
+
+      <Checkbox label="Save payment information" />
     </div>
+
+    <RaisedButton label="Checkout" primary={true} fullWidth={true} />
   </div>
 }
-
-const styles = {
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarButton: {
-    color: '#4877f9',
-  },
-};
 
 export default Radium(PaymentInfo);

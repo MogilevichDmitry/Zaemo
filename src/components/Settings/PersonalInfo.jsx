@@ -25,6 +25,7 @@ const PaymentInfo = () => {
         defaultValue="Frank Hill"
         floatingLabelText="Name"
         floatingLabelFixed={true}
+        fullWidth={true}
       />
       
       <div>
