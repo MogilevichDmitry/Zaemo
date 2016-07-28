@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
+import ArrowBack from '../../../node_modules/material-ui/svg-icons/navigation/arrow-back';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import { Link } from 'react-router';
@@ -25,6 +25,7 @@ const PaymentInfo = () => {
         defaultValue="Frank Hill"
         floatingLabelText="Name"
         floatingLabelFixed={true}
+        fullWidth={true}
       />
       
       <div>

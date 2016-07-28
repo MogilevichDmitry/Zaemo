@@ -8,8 +8,7 @@ import RegisterStepTwo from './components/Register/StepTwo.jsx';
 import RegisterStepThee from './components/Register/StepThree.jsx';
 import SearchResult from './components/SearchResult.jsx';
 import Modal from './components/ui/Desktop/ModalWindow.jsx';
-import Purchase from './components/ui/Desktop/Purchase.jsx';
-import Settings from './components/ui/Desktop/Settings.jsx';
+import Settings from './components/Settings/Settings.jsx';
 import MyPasses from './components/MyPasses.jsx';
 import PassActiveMobile from './components/ui/Mobile/MyPass/Active.jsx'
 import PassExpiredMobile from './components/ui/Mobile/MyPass/Expired.jsx'
@@ -18,9 +17,12 @@ import PassActive from './components/ui/Desktop/MyPass/Active.jsx';
 import PassReady from './components/ui/Desktop/MyPass/Ready.jsx';
 import PassExpired from './components/ui/Desktop/MyPass/Expired.jsx';
 import GymDetail from './components/GymDetail.jsx';
-import WorkoutPreferences from './components/ui/Mobile/Settings/WorkoutPreferences.jsx';
-import PaymentInfo from './components/ui/Mobile/Settings/PaymentInfo.jsx';
-import PersonalInfo from './components/ui/Mobile/Settings/PersonalInfo.jsx';
+import WorkoutPreferences from './components/Settings/WorkoutPreferences.jsx';
+import PaymentInfo from './components/Settings/PaymentInfo.jsx';
+import PersonalInfo from './components/Settings/PersonalInfo.jsx';
+import PurchaseSelectPass from './components/Purchase/SelectPass.jsx';
+import PurchasePaymentInfo from './components/Purchase/PaymentInfo.jsx';
+import PurchaseCheckout from './components/Purchase/Checkout.jsx';
 
 export default () => {
   return <Route>
@@ -30,7 +32,6 @@ export default () => {
     <Route path="search-result" component={SearchResult} />
     <Route path="gym-detail" component={GymDetail} />
     <Route path="modal" component={Modal} />
-    <Route path="purchase" component={Purchase} />
     <Route path="my-passes" component={MyPasses} />
     <Route path="pass-active" component={PassActive} />
     <Route path="pass-ready" component={PassReady} />
@@ -47,6 +48,12 @@ export default () => {
       <Route path="workout" component={WorkoutPreferences} />
       <Route path="payment" component={PaymentInfo} />
       <Route path="personal" component={PersonalInfo} />
+    </Route>
+
+    <Route path="purchase">
+      <IndexRoute component={PurchaseSelectPass} />
+      <Route path="payment" component={PurchasePaymentInfo} />
+      <Route path="checkout" component={PurchaseCheckout} />
     </Route>
 
     <Route path="register">
