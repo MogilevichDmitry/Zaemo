@@ -3,7 +3,7 @@ import Radium from 'radium';
 import Checkbox from 'material-ui/Checkbox';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import Header from './Header.jsx';
+import Header from './../ui/Desktop/Header.jsx';
 import AppBar from 'material-ui/AppBar';
 import { Link } from 'react-router';
 
