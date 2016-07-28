@@ -111,7 +111,6 @@ const GymPass = ({ src, barTitle, status, gymTitle }) =>  {
         }
       </div>
     </div>
-
   </div>
 };
 

@@ -67,7 +67,7 @@ const Gym = ({ src, title, dayPass, expiresIn, useBy, expired }) => {
       </div>
     </div>
   </div>
-}
+};
 
 const styles = {
   gym: {

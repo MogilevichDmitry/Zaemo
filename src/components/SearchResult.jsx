@@ -19,16 +19,10 @@ const SearchResult = () => {
       style={styles.appBar}
       iconElementLeft={
         <Link to="/">
-          <IconButton>
-            <ArrowBack color={'#4877f9'} />
-          </IconButton>
+          <IconButton><ArrowBack color={'#4877f9'} /></IconButton>
         </Link>
       }
-      iconElementRight={
-        <IconButton>
-          <FilterListIcon color={'#4877f9'} />
-        </IconButton>
-      }
+      iconElementRight={<IconButton><FilterListIcon color={'#4877f9'} /></IconButton>}
     />
 
     <div style={styles.map}></div>
@@ -102,7 +96,7 @@ const SearchResult = () => {
       </div>
     </div>
   </div>;
-}
+};
 
 const styles = {
   appBar: {
@@ -129,7 +123,7 @@ const styles = {
     fontWeight: '500',
   },
   inputHintStyle: {
-    fontWeight: 400,
+    fontWeight: '400',
   },
   listLink: {
     textDecoration: 'none',

@@ -106,9 +106,8 @@ const GymPass = ({ src, title, status, }) =>  {
         }
       </div>
     </div>
-    
   </div>
-}
+};
 
 const styles = {
   wrapper: {

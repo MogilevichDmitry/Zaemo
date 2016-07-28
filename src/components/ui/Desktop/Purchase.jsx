@@ -106,7 +106,7 @@ const Purchase = ({ open, close }) => {
       </div>
     </div>
   </ModalWindow>;
-}
+};
 
 const styles = {
   purchase: {

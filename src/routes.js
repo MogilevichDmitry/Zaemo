@@ -31,7 +31,6 @@ export default () => {
     <Route path="home-filter" component={HomeFilter} />
     <Route path="search-result" component={SearchResult} />
     <Route path="gym-detail" component={GymDetail} />
-    <Route path="modal" component={Modal} />
     <Route path="my-passes" component={MyPasses} />
     <Route path="pass-active" component={PassActive} />
     <Route path="pass-ready" component={PassReady} />
@@ -61,6 +60,5 @@ export default () => {
       <Route path="step-2" component={RegisterStepTwo} />
       <Route path="step-3" component={RegisterStepThee} />
     </Route>
-
   </Route>
 }

@@ -8,7 +8,7 @@ const Tabs = ({ children, desktop }) => {
   return <div style={style}>
     {children}
   </div>;
-}
+};
 
 const styles = {
   fontFamily: 'Ubuntu',

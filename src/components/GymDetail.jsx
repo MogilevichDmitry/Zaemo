@@ -12,8 +12,8 @@ import Purchase from './ui/Desktop/Purchase.jsx';
 import ArrowNearMe from 'material-ui/svg-icons/maps/near-me';
 import Call from 'material-ui/svg-icons/communication/call';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
-import ZeamoIcon from '../images/layout/ZeamoIcon.svg';
 
+import ZeamoIcon from '../images/layout/ZeamoIcon.svg';
 import gymSlider from '../images/content/gymSlider.jpg';
 import gymImage from '../images/content/gymDetail.jpg';
 import gymMap from '../images/content/gymMap.jpg';
@@ -31,11 +31,11 @@ class GymDetail extends Component {
     this.handleOpen = this.handleOpen.bind(this);
   }
 
-  handleOpen = () => {
+  handleOpen() {
     this.setState({open: true});
   };
 
-  handleClose = () => {
+  handleClose() {
     this.setState({open: false});
   };
 
@@ -48,11 +48,7 @@ class GymDetail extends Component {
           <AppBar
             style={styles.appBar}
             title="Friars Pilates Studio"
-            iconElementLeft={
-            <IconButton>
-              <ArrowBack />
-            </IconButton>
-          }
+            iconElementLeft={<IconButton><ArrowBack /></IconButton>}
           />
         </div>
 
@@ -462,7 +458,7 @@ class GymDetail extends Component {
       </div>
     );
   }
-}
+};
 
 const styles = {
   main: {
@@ -731,7 +727,6 @@ const styles = {
   sliderImage: {
     width: '100%',
   },
-
   aside: {
     flex: '0.354',
     boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',

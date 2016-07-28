@@ -87,7 +87,7 @@ const Header = ({ search, sort }) => {
       </div>
     </div>
   </div>
-}
+};
 
 const styles = {
   main: {

@@ -12,12 +12,8 @@ const Checkout = () => {
   return <div>
     <AppBar
       title="Checkout"
-      iconElementLeft={
-        <IconButton><NavigationClose /></IconButton>
-      }
-      iconElementRight={
-        <p>Step 3 of 3 </p>
-      }
+      iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+      iconElementRight={<p>Step 3 of 3 </p>}
     />
     
     <div>
@@ -47,7 +43,6 @@ const Checkout = () => {
 
           <div>
             <div>Gym information</div>
-
             <div>
               <div>Friars Pilates Studio</div>
               <div>
@@ -94,7 +89,7 @@ const Checkout = () => {
     
     <RaisedButton label="Submit" primary={true} fullWidth={true} />
   </div>
-}
+};
 
 const styles = {
   zeamoIcon: {

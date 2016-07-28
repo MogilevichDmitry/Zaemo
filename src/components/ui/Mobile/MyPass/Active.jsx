@@ -34,7 +34,6 @@ const Active = () => {
         <span style={styles.countDownTimeHint}>m</span>
         <span style={styles.countDownValue}>{expiresIn.seconds}</span>
         <span style={styles.countDownTimeHint}>s</span>
-
       </div>
     </div>
   </div>;
