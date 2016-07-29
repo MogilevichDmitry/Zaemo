@@ -16,9 +16,7 @@ const WorkoutPreferences = () => {
       iconElementLeft={
         <Link to="/settings"><IconButton><ArrowBack color={'#4877f9'} /></IconButton></Link>
       }
-      iconElementRight={
-        <FlatButton label="Save" style={styles.appBarButton} />
-      }
+      iconElementRight={<FlatButton label="Save" style={styles.appBarButton} />}
     />
 
     <div style={styles.workoutPreferences}>
@@ -43,9 +41,8 @@ const WorkoutPreferences = () => {
       <Checkbox label="Basketball" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
       <Checkbox label="Soccer" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
     </div>
-    
   </div>
-}
+};
 
 const styles = {
   appBar: {
@@ -55,14 +52,16 @@ const styles = {
     color: '#4877f9',
   },
   workoutPreferences: {
-    padding: '6% 4% 3% 6%',
+    padding: '5% 4% 3% 6%',
   },
   checkbox: {
     margin: '2.5% 0',
     fontWeight: '300',
+    fontSize: '13px',
   },
   checkboxIcon: {
     fill: '#4877f9',
+    marginRight: '20px',
   },
 };
 
