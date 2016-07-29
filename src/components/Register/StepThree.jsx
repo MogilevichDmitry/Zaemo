@@ -45,7 +45,6 @@ const StepThree = () => {
 
 const styles = {
   stepThree: {
-    height: '100vh',
     display: 'flex',
     flexDirection: 'column',
   },
@@ -57,10 +56,10 @@ const styles = {
   },
   title: {
     fontFamily: 'Ubuntu',
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
-    marginBottom: '6%',
+    marginBottom: '25px',
   },
   conditions: {
     padding: '12% 4% 4% 6%',
@@ -68,7 +67,11 @@ const styles = {
   description: {
     fontFamily: 'Ubuntu',
     color: '#999999',
+    fontSize: '14px',
     marginBottom: '12%',
+  },
+  checkbox: {
+    fontSize: '14px',
   },
   checkboxIcon: {
     fill: '#4877f9',

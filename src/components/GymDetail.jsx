@@ -552,10 +552,9 @@ const styles = {
     }
   },
   partner: {
-    fontSize: '14px',
+    fontSize: '13px',
     margin: '6px 0 10px',
     display: 'flex',
-    fontWeight: '500',
     '@media (min-width: 770px)': {
       color: '#666666',
       margin: '6px 0 0',

@@ -3,6 +3,7 @@ import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import { Link } from 'react-router';
+import Gym from './ui/Gym.jsx';
 
 import Logo from 'material-ui/svg-icons/editor/insert-photo';
 import FilterListIcon from 'material-ui/svg-icons/content/filter-list';
@@ -27,74 +28,10 @@ const SearchResult = () => {
 
     <div style={styles.map}></div>
 
-    <div style={styles.gym}>
-      <img src={gymA} style={styles.gymImage}/>
-      <div style={styles.gymInfoBox}>
-        <div style={styles.gymTitle}>Pilates</div>
-        <div style={styles.gymDescription}>
-          <div style={styles.gymInfo}>
-            <div style={styles.partner}>
-              <Logo style={styles.logo} />
-              <span style={styles.partnerDescription}>Zaemo Partner</span>
-            </div>
-            <div style={styles.position}>
-              <span style={styles.positionDistance}>2.1mi</span>
-              <span>Mission Valley</span>
-            </div>
-          </div>
-          <div style={styles.cost}>
-            <div style={styles.costDescription}>Day pass</div>
-            <div style={styles.costAmount}>$15.00</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Gym src={gymA} title="Pilates" dayPass="$15.00" />
+    <Gym src={gymABC} title="Pilates" dayPass="$15.00" />
+    <Gym src={gymA} title="Pilates" dayPass="$15.00" />
 
-    <div style={styles.gym}>
-      <img src={gymABC} style={styles.gymImage}/>
-      <div style={styles.gymInfoBox}>
-        <div style={styles.gymTitle}>Pilates</div>
-        <div style={styles.gymDescription}>
-          <div style={styles.gymInfo}>
-            <div style={styles.partner}>
-              <Logo style={styles.logo} />
-              <span style={styles.partnerDescription}>Zaemo Partner</span>
-            </div>
-            <div style={styles.position}>
-              <span style={styles.positionDistance}>2.1mi</span>
-              <span>Mission Valley</span>
-            </div>
-          </div>
-          <div style={styles.cost}>
-            <div style={styles.costDescription}>Day pass</div>
-            <div style={styles.costAmount}>$15.00</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style={styles.gym}>
-      <img src={gymA} style={styles.gymImage}/>
-      <div style={styles.gymInfoBox}>
-        <div style={styles.gymTitle}>Pilates</div>
-        <div style={styles.gymDescription}>
-          <div style={styles.gymInfo}>
-            <div style={styles.partner}>
-              <Logo style={styles.logo} />
-              <span style={styles.partnerDescription}>Zaemo Partner</span>
-            </div>
-            <div style={styles.position}>
-              <span style={styles.positionDistance}>2.1mi</span>
-              <span>Mission Valley</span>
-            </div>
-          </div>
-          <div style={styles.cost}>
-            <div style={styles.costDescription}>Day pass</div>
-            <div style={styles.costAmount}>$15.00</div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>;
 };
 

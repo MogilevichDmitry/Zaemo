@@ -30,6 +30,10 @@ class Home extends Component {
       searchBar: false,
       text: '',
     };
+
+    this.handleOpenSearchBar = this.handleOpenSearchBar.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleBackToAppBar = this.handleBackToAppBar.bind(this);
   }
 
   handleOpenSearchBar() {
@@ -38,7 +42,7 @@ class Home extends Component {
     });
   }
 
-  handleSearc(e) {
+  handleSearch(e) {
     const text = e.target.value;
 
     this.setState({
@@ -328,21 +332,21 @@ const styles = {
   },
   filterFirstTitle: {
     fontFamily: 'Ubuntu',
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
     margin: '0 0 16px 4px',
   },
   title: {
     fontFamily: 'Ubuntu',
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
     marginBottom: '25px',
   },
   radioButton: {
     marginBottom: '13px',
-    fontSize: '14px',
+    fontSize: '13px',
     fontWeight: '300',
     color: '#666666',
   },
@@ -352,7 +356,7 @@ const styles = {
   },
   checkbox: {
     marginBottom: '13px',
-    fontSize: '14px',
+    fontSize: '13px',
     fontWeight: '300',
   },
   checkboxIcon: {
@@ -361,10 +365,13 @@ const styles = {
   },
   filterField: {
     width: '151px',
+    fontSize: '13px',
+    fontWeight: '500',
   },
   fieldLabel: {
     fontSize: '16px',
     color: 'rgba(153, 153, 153, 1)',
+    top: '28px',
   },
   underline: {
     borderColor: 'rgba(72, 119, 249, 0.7)',

@@ -61,10 +61,10 @@ const styles = {
   },
   title: {
     fontFamily: 'Ubuntu',
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
-    marginBottom: '6%',
+    marginBottom: '20px',
   },
   workoutPreferences: {
     padding: '6% 4% 3% 6%',
@@ -72,14 +72,17 @@ const styles = {
   description: {
     fontFamily: 'Ubuntu',
     color: '#999999',
+    fontSize: '14px',
     marginBottom: '3.3%',
   },
   checkbox: {
     margin: '2.5% 0',
     fontWeight: '300',
+    fontSize: '14px',
   },
   checkboxIcon: {
     fill: '#4877f9',
+    marginRight: '10px',
   },
   button: {
     width: '100%',

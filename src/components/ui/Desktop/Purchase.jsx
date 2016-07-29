@@ -122,7 +122,7 @@ const styles = {
     alignItems: 'center',
   },
   purchaseTitle: {
-    fontSize: '16px',
+    fontSize: '15px',
     color: 'black',
     fontWeight: '500',
     marginBottom: '5px',
@@ -183,7 +183,6 @@ const styles = {
   },
   optionValue: {
     color: '#666666',
-    paddingLeft: '3px',
   },
   checkbox: {
     marginTop: '15px',
