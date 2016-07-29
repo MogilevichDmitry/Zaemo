@@ -7,8 +7,10 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Checkbox from 'material-ui/Checkbox';
-
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import { registerStepOne } from '../../styles';
+
+const styles = registerStepOne;
 
 const StepOne = () => {
   return <div>
@@ -80,47 +82,6 @@ const StepOne = () => {
       />
     </div>
   </div>;
-};
-
-const styles = {
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarButton: {
-    color: '#4877f9',
-  },
-  title: {
-    fontFamily: 'Ubuntu',
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-    marginBottom: '6%',
-  },
-  personalInfo: {
-    padding: '6% 4% 6% 6%',
-  },
-  fieldLabel: {
-    color: 'rgba(153, 153, 153, 1)',
-  },
-  underline: {
-    borderColor: 'rgba(72, 119, 249, 0.7)',
-  },
-  fieldsBox: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  fieldsBoxField: {
-    width: '46%',
-  },
-  selectFieldIcon: {
-    fill: '#4877f9',
-  },
-  checkbox: {
-    margin: '4% 0'
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-  },
 };
 
 export default Radium(StepOne);

@@ -5,10 +5,10 @@ import IconButton from 'material-ui/IconButton';
 import Checkbox from 'material-ui/Checkbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import { purchasePaymentInfo } from '../../styles';
 
-import background from '../../images/layout/myPassesBg.jpg';
+const styles = purchasePaymentInfo;
 
 const PaymentInfo = () => {
   return <div style={styles.wrapper}>
@@ -57,66 +57,6 @@ const PaymentInfo = () => {
 
     <RaisedButton label="Checkout" primary={true} fullWidth={true} />
   </div>
-};
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    minHeight: '100vh',
-    fontFamily: 'Ubuntu',
-    color: 'white',
-    fontSize: '13px',
-  },
-  appBar: {
-    background: 'none',
-  },
-  appBarLeftInfo: {
-    fontSize: '13px',
-    color: '#cccccc',
-  },
-  appBarRightIcon: {
-    margin: 'auto',
-  },
-  hint: {
-    color: '#cccccc',
-    zIndex:'123',
-    fontSize: '13px',
-  },
-  main: {
-    flex: '1',
-    padding: '0 25px',
-  },
-  boxRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    margin: '15px 0',
-  },
-  fieldName: {
-    color: 'white',
-  },
-  fieldCardNumber: {
-    flex: '0.61',
-    color: 'white',
-  },
-  fieldCvv: {
-    flex: '0.32',
-    color: 'white',
-  },
-  checkbox: {
-    width: '100%',
-    marginTop: '30px',
-  },
-  checkboxLabel: {
-    color: 'white',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-    marginRight: '15px',
-  },
 };
 
 export default Radium(PaymentInfo);

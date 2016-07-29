@@ -3,12 +3,12 @@ import Radium from 'radium';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import Create from 'material-ui/svg-icons/content/create';
 import ZeamoIcon from '../../images/layout/ZeamoIcon.svg';
+import { puchaseCheckout } from '../../styles';
 
-import background from '../../images/layout/myPassesBg.jpg';
+const styles = puchaseCheckout;
 
 const Checkout = () => {
   return <div style={styles.wrapper}>
@@ -95,78 +95,6 @@ const Checkout = () => {
     
     <RaisedButton label="Submit" primary={true} fullWidth={true} />
   </div>
-};
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    minHeight: '100vh',
-    fontFamily: 'Ubuntu',
-    color: 'white',
-    fontSize: '13px',
-  },
-  appBar: {
-    background: 'none',
-  },
-  appBarLeftInfo: {
-    fontSize: '13px',
-    color: '#cccccc',
-  },
-  appBarRightIcon: {
-    margin: 'auto',
-  },
-  main: {
-    flex: '1',
-    padding: '0 10px',
-  },
-  passInfo: {
-    marginBottom: '20px',
-  },
-  heading: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    fontSize: '17px',
-    marginBottom: '15px',
-    borderBottom: '1px solid white',
-  },
-  headingText: {
-    alignSelf: 'center',
-  },
-  options: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  },
-  optionsFlexStart: {
-    display: 'flex',
-  },
-  option: {
-    marginRight: '20px',
-    marginBottom: '20px',
-  },
-  optionFlexStart: {
-    marginRight: '50px',
-    marginBottom: '20px',
-  },
-  optionName: {
-    color: '#cccccc',
-    marginBottom: '10px',
-  },
-  partner: {
-    margin: '5px 0 13px',
-  },
-  zeamoIcon: {
-    width: '14px',
-    height: '14px',
-    margin: 'auto 1.5% auto 0',
-  },
-  number: {
-    marginTop: '13px',
-  }
 };
 
 export default Radium(Checkout);

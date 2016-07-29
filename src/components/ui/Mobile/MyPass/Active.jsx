@@ -1,9 +1,10 @@
 import React from 'react';
 import Radium from 'radium';
 import GymPass from './GymPass.jsx';
-
-import background from '../../../../images/layout/myPassesBg.jpg';
 import gymA from '../../../../images/content/gymMyPass.jpg';
+import { uiMobileMyPassActive } from '../../../../styles';
+
+const styles = uiMobileMyPassActive;
 
 const expiresIn = {
   hours: '23',
@@ -37,47 +38,6 @@ const Active = () => {
       </div>
     </div>
   </div>;
-};
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    minHeight: '100vh',
-    fontFamily: 'Ubuntu',
-    paddingBottom: '25px',
-  },
-  countDown: {
-    fontSize: '13px',
-    color: '#cccccc',
-    margin: '0 auto',
-    maxWidth: '350px',
-    textAlign: 'center',
-    padding: '0 30px',
-  },
-  countDownDescription: {
-    marginBottom: '15px',
-  },
-  countDownTimer: {
-    fontSize: '18px',
-  },
-  countDownTitle: {
-    marginBottom: '10px',
-    fontWeight: '500',
-    color: 'white',
-  },
-  countDownValue: {
-    fontWeight: '600',
-    fontSize: '24px',
-    color: 'white',
-  },
-  countDownTimeHint: {
-    marginRight: '7px',
-    fontSize: '24px',
-  },
 };
 
 export default Radium(Active);

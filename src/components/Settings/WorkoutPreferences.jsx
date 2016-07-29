@@ -6,7 +6,9 @@ import ArrowBack from '../../../node_modules/material-ui/svg-icons/navigation/ar
 import FlatButton from 'material-ui/FlatButton';
 import Checkbox from 'material-ui/Checkbox'
 import { Link } from 'react-router';
+import { settingsWorkoutPreferences } from '../../styles';
 
+const styles = settingsWorkoutPreferences;
 
 const WorkoutPreferences = () => {
   return <div>
@@ -42,27 +44,6 @@ const WorkoutPreferences = () => {
       <Checkbox label="Soccer" style={styles.checkbox} iconStyle={styles.checkboxIcon} />
     </div>
   </div>
-};
-
-const styles = {
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarButton: {
-    color: '#4877f9',
-  },
-  workoutPreferences: {
-    padding: '5% 4% 3% 6%',
-  },
-  checkbox: {
-    margin: '2.5% 0',
-    fontWeight: '300',
-    fontSize: '13px',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-    marginRight: '20px',
-  },
 };
 
 export default Radium(WorkoutPreferences);

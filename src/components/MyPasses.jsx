@@ -8,12 +8,13 @@ import Header from './ui/Desktop/Header.jsx';
 import Gym from './ui/Gym.jsx';
 import GymMobile from './ui/Mobile/Gym.jsx';
 import {Tabs, Tab} from 'material-ui/Tabs';
-
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
-
 import gymReady from '../images/content/gymMyPass.jpg';
 import gymExpired from '../images/content/gymMyPassExpired.jpg';
 import gymActive from '../images/content/gymMyPassActive.jpg';
+import { myPasses } from '../styles';
+
+const styles = myPasses;
 
 const expiresIn = {
   hours: '23',
@@ -69,66 +70,6 @@ const MyPasses = () => {
       </Tabs>
     </div>
   </div>;
-};
-
-const styles = {
-  main: {
-    display: 'flex',
-    flexDirection: 'column',
-    '@media (min-width: 770px)': {
-      maxWidth: '700px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 960px)': {
-      maxWidth: '820px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 1440px)': {
-      maxWidth: '1040px',
-      margin: '0 auto',
-    },
-  },
-  wrapperDesktop: {
-    background: '#f2f2f2',
-    '@media (min-width: 770px)': {
-      minHeight: '100vh',
-      paddingBottom: '40px',
-    },
-    '@media (max-width: 770px)': {
-      display: 'none',
-    },
-  },
-  changer: {
-    alignSelf: 'flex-end',
-    marginBottom: '10px',
-    minWidth: '120px',
-  },
-  underline: {
-    borderColor: 'rgba(72, 119, 249, 0.7)',
-  },
-  icon: {
-    fill: '#4877f9',
-  },
-  wrapperMobile: {
-    '@media (min-width: 770px)': {
-      display: 'none',
-    },
-  },
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  tabs: {
-    backgroundColor: '#162233',
-    borderWidth: '4px',
-  },
-  tabWrapper: {
-    background: 'white',
-    padding: '0 2%',
-  },
-  gymBox: {
-    padding: '15px 1%',
-    borderBottom: '1px solid #d9d9d9',
-  },
 };
 
 export default Radium(MyPasses);

@@ -5,11 +5,11 @@ import IconButton from 'material-ui/IconButton';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import ZeamoIcon from '../../images/layout/ZeamoIcon.svg';
+import { purchaseSelectPass } from '../../styles';
 
-import background from '../../images/layout/myPassesBg.jpg';
+const styles = purchaseSelectPass;
 
 const SelectPass = () => {
   return <div style={styles.wrapper}>
@@ -74,75 +74,6 @@ const SelectPass = () => {
 
     <RaisedButton label="Purchase" primary={true} fullWidth={true} />
   </div>
-};
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    minHeight: '100vh',
-    fontFamily: 'Ubuntu',
-    color: 'white',
-    fontSize: '13px',
-  },
-  appBar: {
-    background: 'none',
-  },
-  appBarLeftInfo: {
-    fontSize: '13px',
-    color: '#cccccc',
-  },
-  appBarRightIcon: {
-    margin: 'auto',
-  },
-  hint: {
-    color: '#cccccc',
-    zIndex:'123',
-    fontSize: '13px',
-  },
-  main: {
-    flex: '1',
-    padding: '0 10px',
-  },
-  selectField: {
-    width: '50%',
-  },
-  boxColumn: {
-    margin: '30px 0 15px',
-  },
-  heading: {
-    fontSize: '17px',
-    paddingBottom: '7px',
-    marginBottom: '15px',
-    borderBottom: '1px solid white',
-  },
-  options: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  },
-  option: {
-    marginRight: '20px',
-    marginBottom: '20px',
-  },
-  optionName: {
-    color: '#cccccc',
-    marginBottom: '10px',
-  },
-  partner: {
-    margin: '5px 0 13px',
-  },
-  zeamoIcon: {
-    width: '14px',
-    height: '14px',
-    margin: 'auto 1.5% auto 0',
-  },
-  number: {
-    marginTop: '13px',
-  }
 };
 
 export default Radium(SelectPass);
