@@ -2,6 +2,9 @@ import React from 'react';
 import Radium from 'radium';
 import ZeamoIcon from '../../../../images/layout/ZeamoIcon.svg';
 import FlagButton from 'material-ui/FlatButton';
+import { uiDesktopMyPassGymPass } from '../../../../styles';
+
+const styles = uiDesktopMyPassGymPass;
 
 const GymPass = ({ src, title, status, }) =>  {
   return <div style={styles.wrapper}>
@@ -107,82 +110,6 @@ const GymPass = ({ src, title, status, }) =>  {
       </div>
     </div>
   </div>
-};
-
-const styles = {
-  wrapper: {
-    paddingRight: '50px',
-    marginBottom: '20px',
-  },
-  gym: {
-    display: 'flex',
-    marginBottom: '20px',
-  },
-  gymImageBox: {
-    width: '140px',
-  },
-  gymImage: {
-    width: '100%',
-  },
-  gymInfo: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'column',
-    padding: '10px 20px 5px',
-  },
-  gymTitle: {
-    marginBottom: '5px',
-    color: '#031021',
-    fontWeight: '500',
-    fontSize: '17px',
-  },
-  partner: {
-    display: 'flex',
-    fontSize: '13px',
-    color: '#666666',
-  },
-  zeamoIcon: {
-    width: '14px',
-    height: '14px',
-    margin: 'auto 1.5% auto 0',
-  },
-  gymContact: {
-    fontSize: '14px',
-    color: '#666666',
-  },
-  gymContactNumber: {
-    marginTop: '6px',
-  },
-  gymButton: {
-    alignSelf: 'flex-end',
-    margin: '0 auto',
-  },
-  pass: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  passTitle: {
-    fontSize: '17px',
-    color: 'black',
-    fontWeight: '500',
-    marginBottom: '10px',
-  },
-  options: {
-    display: 'flex',
-    fontSize: '13px',
-    justifyContent: 'space-between',
-  },
-  instruction: {
-    marginTop: '30px',
-    fontSize: '13px',
-  },
-  optionName: {
-    color: '#999999',
-    marginBottom: '15px',
-  },
-  optionValue: {
-    color: '#666666',
-  },
 };
 
 export default Radium(GymPass);

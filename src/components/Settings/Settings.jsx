@@ -7,8 +7,10 @@ import IconButton from 'material-ui/IconButton';
 import Header from './../ui/Desktop/Header.jsx';
 import AppBar from 'material-ui/AppBar';
 import { Link } from 'react-router';
-
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
+import { settingsCommon } from '../../styles';
+
+const styles = settingsCommon;
 
 const Settings = () => {
   return <div style={styles.wrapper}>
@@ -164,145 +166,6 @@ const Settings = () => {
       </div>
     </div>
   </div>;
-};
-
-const styles = {
-  wrapper: {
-    fontFamily: 'Ubuntu',
-    color: 'black',
-    paddingBottom: '45px',
-    '@media (min-width: 770px)': {
-      background: '#f2f2f2',
-    },
-  },
-  main: {
-    margin: '0 auto',
-    '@media (min-width: 770px)': {
-      maxWidth: '700px',
-      textAlign: 'center',
-    },
-    '@media (min-width: 960px)': {
-      maxWidth: '820px',
-    },
-  },
-  onlyMobile: {
-    '@media (min-width: 770px)': {
-      display: 'none',
-    },
-  },
-  onlyDesktop: {
-    '@media (max-width: 770px)': {
-      display: 'none',
-    }
-  },
-  appBar: {
-    background: '#162233',
-  },
-  content: {
-    '@media (max-width: 770px)': {
-      padding: '15px 2.5% 0',
-    },
-    '@media (min-width: 770px)': {
-      marginTop: '40px',
-    },
-  },
-  heading: {
-    fontSize: '17px',
-    fontWeight: '500',
-    marginBottom: '15px',
-    textAlign: 'center',
-  },
-  settingsBox: {
-    '@media (max-width: 770px)': {
-      padding: '4% 4.5%',
-      borderBottom: '1px solid #d9d9d9',
-    },
-    '@media (min-width: 770px)': {
-      background: 'white',
-      boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      marginBottom: '15px',
-      padding: '20px 35px 35px',
-    },
-  },
-  settingsBoxLast: {
-    padding: '4% 4.5%',
-  },
-  title: {
-    fontSize: '17px',
-    fontWeight: '500',
-    marginBottom: '30px',
-    '@media (max-width: 770px)': {
-      color: '#4d4d4d',
-      marginBottom: '10px',
-    },
-  },
-  checkboxGroup: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  checkbox: {
-    textAlign: 'left',
-    marginBottom: '14px',
-    width: 'auto',
-    minWidth: '186px',
-    fontWeight: '300',
-    fontSize: '13px',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-    marginRight: '10px',
-  },
-  boxColumn: {
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  boxRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: '5px',
-  },
-  underline: {
-    borderColor: 'rgba(72, 119, 249, 0.7)',
-  },
-  fieldName: {
-    flex: '0.72',
-    fontSize: '14px',
-  },
-  fieldPhone: {
-    flex: '0.24',
-    fontSize: '14px',
-  },
-  fieldEmail: {
-    flex: '0.47',
-    fontSize: '14px',
-  },
-  fieldPassword: {
-    flex: '0.47',
-    fontSize: '14px',
-  },
-  fieldDate: {
-    flex: '0.24',
-    fontSize: '14px',
-  },
-  cardInformation: {
-    display: 'flex',
-  },
-  fieldCardNumber: {
-    flex: '0.25',
-    fontSize: '14px',
-    marginRight: '20px',
-  },
-  fieldCvv: {
-    flex: '0.12',
-    fontSize: '14px',
-  },
-  buttonBox: {
-    marginTop: '30px',
-  },
-  link: {
-    textDecoration: 'none',
-    color: '#666666'
-  },
 };
 
 export default Radium(Settings);

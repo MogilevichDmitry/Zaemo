@@ -9,8 +9,10 @@ import MenuItem from 'material-ui/MenuItem';
 import Checkbox from 'material-ui/Checkbox';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
-
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import { homeFilter } from '../styles';
+
+const styles = homeFilter;
 
 const HomeFilter = () => {
   return <div>
@@ -229,118 +231,6 @@ const HomeFilter = () => {
       </div>
     </div>
   </div>;
-};
-
-const styles = {
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarButton: {
-    color: '#4877f9',
-  },
-  title: {
-    fontFamily: 'Ubuntu',
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-    marginBottom: '3.5%',
-  },
-  filter: {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '6% 10px 0',
-  },
-  filterMain: {
-    flex: '1',
-  },
-  filterExtra: {
-    flex: '1',
-  },
-  radioButtons: {
-    display:'block',
-    marginBottom: '6%',
-  },
-  radioButton: {
-    display: 'inline-block',
-    margin: '0 2% 2.25% 0',
-    minWidth: '160px',
-    width: 'auto',
-    fontWeight: '300',
-    color: '#666666',
-    fontSize: '13px',
-  },
-  radioIcon: {
-    fill: '#4877f9',
-    marginRight: '2%',
-  },
-  areaTitle: {
-    fontFamily: 'Ubuntu',
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-  },
-  area: {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '0 3%',
-    marginBottom: '3%',
-  },
-  areaRadius: {
-    width: '45%',
-    fontSize: '13px',
-    fontWeight: '500',
-  },
-  address: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  areaZipcode: {
-    flex: '0.45',
-    fontSize: '13px',
-    fontWeight: '500',
-  },
-  areaState: {
-    flex: '0.45',
-    fontSize: '13px',
-    fontWeight: '500',
-  },
-  fieldLabel: {
-    fontSize: '16px',
-    color: 'rgba(153, 153, 153, 1)',
-    top: '28px',
-  },
-  underline: {
-    borderColor: 'rgba(72, 119, 249, 0.7)',
-  },
-  selectFieldIcon: {
-    fill: '#4877f9',
-  },
-  tabTitle: {
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-    textTransform: 'capitalize',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-  },
-  checkboxGroup: {
-    marginTop: '3%',
-  },
-  checkbox: {
-    display: 'inline-block',
-    marginBottom: '2%',
-    width: 'auto',
-    minWidth: '186px',
-    fontWeight: '300',
-    fontSize: '13px',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-    marginRight: '2.5%',
-  },
-  button: {
-    display: 'flex',
-    margin: '6% auto',
-  },
 };
 
 export default Radium(HomeFilter);

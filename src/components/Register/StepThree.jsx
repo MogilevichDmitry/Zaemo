@@ -4,8 +4,10 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import Checkbox from 'material-ui/Checkbox';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import { registerStepThree } from '../../styles';
+
+const styles = registerStepThree;
 
 const StepThree = () => {
   return <div style={styles.stepThree}>
@@ -41,46 +43,6 @@ const StepThree = () => {
       style={styles.button}
     />
   </div>;
-};
-
-const styles = {
-  stepThree: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarButton: {
-    color: '#4877f9',
-  },
-  title: {
-    fontFamily: 'Ubuntu',
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-    marginBottom: '25px',
-  },
-  conditions: {
-    padding: '12% 4% 4% 6%',
-  },
-  description: {
-    fontFamily: 'Ubuntu',
-    color: '#999999',
-    fontSize: '14px',
-    marginBottom: '12%',
-  },
-  checkbox: {
-    fontSize: '14px',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-  },
-  button: {
-    width: '100%',
-    position: 'absolute',
-    bottom: '0',
-  },
 };
 
 export default Radium(StepThree);

@@ -5,6 +5,9 @@ import FlagButton from 'material-ui/FlatButton';
 import AppBar from 'material-ui/AppBar';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import IconButton from 'material-ui/IconButton';
+import { uiMobileMyPassGymPass } from '../../../../styles';
+
+const styles = uiMobileMyPassGymPass;
 
 const GymPass = ({ src, barTitle, status, gymTitle }) =>  {
   return <div>
@@ -108,78 +111,6 @@ const GymPass = ({ src, barTitle, status, gymTitle }) =>  {
       </div>
     </div>
   </div>
-};
-
-const styles = {
-  appBar: {
-    background: 'none',
-  },
-  wrapper: {
-    padding: '0 25px',
-    fontFamily: 'Ubuntu',
-  },
-  gym: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  imageBox: {
-    flex: '0.33',
-  },
-  image: {
-    width: '100%',
-  },
-  gymInfo: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'column',
-    flex: '0.6',
-  },
-  gymTitle: {
-    marginBottom: '3%',
-    color: 'white',
-    fontWeight: '500',
-    fontSize: '17px',
-  },
-  partner: {
-    fontSize: '13px',
-    marginBottom: '2%',
-    display: 'flex',
-    color: '#cccccc',
-  },
-  zeamoIcon: {
-    width: '14px',
-    height: '14px',
-    margin: 'auto 1.5% auto 0',
-  },
-  extraInfo: {
-    color: 'white',
-    fontSize: '13px',
-  },
-  options: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    marginTop: '25px',
-  },
-  option: {
-    marginRight: '30px',
-    marginBottom: '20px',
-    flex: 'none',
-    '@media (max-width: 340px)': {
-      flex: '0.5',
-    },
-  },
-  optionName: {
-    color: '#cccccc',
-    marginBottom: '10px',
-  },
-  instruction: {
-    margin:'5px 0 25px',
-  },
-  instructionTitle: {
-    color: '#cccccc',
-    marginBottom: '10px',
-  },
 };
 
 export default Radium(GymPass);

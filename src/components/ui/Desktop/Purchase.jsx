@@ -7,6 +7,9 @@ import MenuItem from 'material-ui/MenuItem';
 import ModalWindow from './ModalWindow.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
 import ZeamoIcon from '../../../images/layout/ZeamoIcon.svg';
+import { uiDesktopPurchase } from '../../../styles';
+
+const styles = uiDesktopPurchase;
 
 const Purchase = ({ open, close }) => {
   return <ModalWindow title="Purchase pass" open={open} close={close} >
@@ -106,132 +109,6 @@ const Purchase = ({ open, close }) => {
       </div>
     </div>
   </ModalWindow>;
-};
-
-const styles = {
-  purchase: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  purchasePayment: {
-    marginBottom: '25px',
-  },
-  purchaseBoxRow: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  purchaseTitle: {
-    fontSize: '15px',
-    color: 'black',
-    fontWeight: '500',
-    marginBottom: '5px',
-  },
-  underline: {
-    borderColor: 'rgba(72, 119, 249, 0.7)',
-  },
-  hint: {
-    fontSize: '12px',
-    paddingBottom: '5px',
-    color: '#999999',
-  },
-  floatingLabel: {
-    color: '#999999',
-  },
-  icon: {
-    fill: '#4877f9',
-  },
-  fieldName: {
-    flex: '0.6',
-    fontSize: '14px',
-  },
-  fieldDate: {
-    flex: '0.3',
-    fontSize: '14px',
-    marginLeft: '20px',
-  },
-  fieldCard: {
-    flex: '0.45',
-    fontSize: '14px',
-  },
-  fieldCvv: {
-    flex: '0.2',
-    fontSize: '14px',
-    marginLeft: '20px',
-  },
-  fieldPass: {
-    flex: '0.3',
-    fontSize: '14px',
-  },
-  fieldDuration: {
-    flex: '0.3',
-    marginLeft: '15px',
-    fontSize: '13px',
-  },
-  fieldPrice: {
-    flex: '0.3',
-    marginLeft: '15px',
-    fontSize: '13px',
-  },
-  fieldUse: {
-    marginTop: '20px',
-    fontSize: '13px',
-  },
-  optionName: {
-    color: '#999999',
-    marginBottom: '15px',
-  },
-  optionValue: {
-    color: '#666666',
-  },
-  checkbox: {
-    marginTop: '15px',
-    fontSize: '14px',
-    fontWeight: '300',
-    color: '#999999',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-    marginRight: '10px',
-  },
-  partner: {
-    marginBottom: '10px',
-  },
-  zeamoIcon: {
-    width: '14px',
-    height: '14px',
-    margin: 'auto 1.5% auto 0',
-  },
-  partnerDescription: {
-    color: '#666666',
-  },
-  gymInformation: {
-    marginTop: '15px',
-    fontSize: '13px',
-  },
-  gymInformationTitle: {
-    color: '#999999',
-    marginBottom: '15px',
-  },
-  gymTitle: {
-    color: '#666666',
-  },
-  gymAddress: {
-      marginBottom: '10px',
-  },
-  gymNumber: {
-    marginBottom: '10px',
-  },
-  controls: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
-  buttonCancel: {
-    fontSize: '15px',
-  },
-  buttonCheckout: {
-    marginLeft: '20px',
-  },
 };
 
 export default Radium(Purchase);

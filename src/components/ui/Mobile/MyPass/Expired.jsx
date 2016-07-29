@@ -3,9 +3,10 @@ import Radium from 'radium';
 import GymPass from './GymPass.jsx';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-
-import background from '../../../../images/layout/myPassesBg.jpg';
 import gymA from '../../../../images/content/gymMyPass.jpg';
+import { uiMobileMyPassExpired } from '../../../../styles';
+
+const styles = uiMobileMyPassExpired;
 
 const Expired = () => {
   return <div style={styles.wrapper}>
@@ -55,52 +56,6 @@ const Expired = () => {
       </div>
     </div>
   </div>;
-};
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    minHeight: '100vh',
-    fontFamily: 'Ubuntu',
-    paddingBottom: '25px',
-  },
-  statusWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    padding: '0 5px',
-    fontSize: '13px',
-    color: '#cccccc',
-  },
-  buttonBox: {
-    width: '60%',
-    margin: '0 auto 20px',
-  },
-  statusTitle: {
-    padding: '0 20px 15px',
-    borderBottom: '1px solid #9a918a',
-  },
-  passSelect: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '15px 20px',
-    borderBottom: '1px solid #9a918a',
-  },
-  passSelectTitle: {
-    margin: 'auto 0',
-    color: 'white',
-  },
-  passSelectCost: {
-    margin: 'auto 10px auto 2px',
-    color: 'white',
-  },
-  passSelectButton: {
-    margin: 'auto 0',
-  },
 };
 
 export default Radium(Expired);

@@ -6,6 +6,9 @@ import ArrowBack from '../../../node_modules/material-ui/svg-icons/navigation/ar
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import { Link } from 'react-router';
+import { settingsPersonalInfo } from '../../styles';
+
+const styles = settingsPersonalInfo;
 
 const PaymentInfo = () => {
   return <div>
@@ -59,37 +62,6 @@ const PaymentInfo = () => {
       </div>
     </div>
   </div>
-};
-
-const styles = {
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarButton: {
-    color: '#4877f9',
-  },
-  wrapper: {
-    padding: '4% 5%',
-  },
-  inputField: {
-    fontSize: '14px',
-  },
-  underline: {
-    borderColor: 'rgba(72, 119, 249, 0.7)',
-  },
-  boxRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  fieldNumber: {
-    flex: '0.45',
-  },
-  fieldEmail: {
-    flex: '0.45',
-  },
-  fieldPassword: {
-    width: '50%',
-  },
 };
 
 export default Radium(PaymentInfo);

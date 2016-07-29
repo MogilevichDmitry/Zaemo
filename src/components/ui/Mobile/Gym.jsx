@@ -1,8 +1,10 @@
 import React from 'react';
 import Radium from 'radium';
-
 import ZeamoIcon from '../../../images/layout/ZeamoIcon.svg';
 import LocationOn from 'material-ui/svg-icons/communication/location-on';
+import { uiMobileGym } from '../../../styles';
+
+const styles = uiMobileGym;
 
 const Gym = ({ src, title, partner }) => {
   return <div style={styles.gym}>
@@ -43,79 +45,6 @@ const Gym = ({ src, title, partner }) => {
       </div>
     </div>
   </div>
-};
-
-const styles = {
-  gym: {
-    fontFamily: 'Ubuntu',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  imageBox: {
-   flex: '0.25',
-  },
-  image: {
-    width: '100%',
-  },
-  infoBox: {
-    display: 'flex',
-    flex: '0.715',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  boxRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    fontSize: '13px',
-    color: '#999999',
-  },
-  boxColumn: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  title: {
-    marginBottom: '6px',
-    color: '#4d4d4d',
-    fontWeight: '500',
-    fontSize: '17px',
-  },
-  partner: {
-    display: 'flex',
-    fontSize: '13px',
-    marginBottom: '4px',
-    color: '#666666',
-  },
-  zeamoIcon: {
-    width: '14px',
-    height: '14px',
-    margin: 'auto 1.5% auto 0',
-  },
-  location: {
-    display: 'flex',
-    fontSize: '13px',
-    color: '#999999',
-    marginBottom: '4px',
-  },
-  locationIcon: {
-    fill: '#4877f9',
-    width: '17px',
-    height: '17px',
-    margin: 'auto 1% auto -1.2px',
-  },
-  locationDecription: {
-    margin: 'auto 0',
-    whiteSpace: 'nowrap',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    '@media (max-width: 370px)': {
-      width: '180px',
-    }
-  },
-  date: {
-    color: '#4d4d4d',
-    fontWeight: '500',
-  },
 };
 
 export default Radium(Gym);

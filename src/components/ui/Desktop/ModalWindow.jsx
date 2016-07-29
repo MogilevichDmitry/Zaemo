@@ -6,6 +6,9 @@ import SelectField from 'material-ui/SelectField';
 import Dialog from 'material-ui/Dialog';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import IconButton from 'material-ui/IconButton';
+import { uiDesktopModalWindow  } from '../../../styles';
+
+const styles = uiDesktopModalWindow;
 
 const ModalWindow =({ children, title, open, close }) => {
   return <div>
@@ -30,19 +33,6 @@ const ModalWindow =({ children, title, open, close }) => {
       </div>
     </Dialog>
   </div>;
-}
-
-const styles = {
-  appBar: {
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    right: '0',
-    backgroundColor: '#162233',
-  },
-  children: {
-    paddingTop: '60px',
-  },
 };
 
 export default Radium(ModalWindow);

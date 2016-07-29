@@ -2,8 +2,10 @@ import React from 'react';
 import Radium from 'radium';
 import ModalWindow from '../ModalWindow.jsx';
 import GymPass from './GymPass.jsx';
-
 import gym from '../../../../images/content/gymMyPassActive.jpg';
+import { uiDesktopMyPassActive } from '../../../../styles';
+
+const styles = uiDesktopMyPassActive;
 
 const expiresIn = {
   hours: '23',
@@ -39,41 +41,6 @@ const Active = () => {
       </div>
     </div>
   </ModalWindow>;
-};
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  countDown: {
-    fontSize: '13px',
-    color: '#999999',
-    margin: 'auto',
-    maxWidth: '350px',
-    textAlign: 'center',
-  },
-  countDownDescription: {
-    marginBottom: '15px',
-  },
-  countDownTimer: {
-    color: 'black',
-    fontSize: '18px',
-  },
-  countDownTitle: {
-    marginBottom: '10px',
-    fontWeight: '500',
-  },
-  countDownValue: {
-    fontWeight: '600',
-    fontSize: '24px',
-  },
-  countDownTimeHint: {
-    color: '#999999',
-    marginRight: '7px',
-    fontSize: '24px',
-  },
 };
 
 export default Radium(Active);

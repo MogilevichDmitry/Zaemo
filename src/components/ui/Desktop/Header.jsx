@@ -7,11 +7,12 @@ import MenuItem from 'material-ui/MenuItem';
 import IconMenu from 'material-ui/IconMenu';
 import Tabs from '../Tabs.jsx';
 import Tab from '../Tab.jsx';
-
 import ZeamoLogo from '../../../images/layout/ZeamoLogo.svg';
 import ArrowDropDown from 'material-ui/svg-icons/navigation/arrow-drop-down';
-
 import avatar from '../../../images/content/avatar.png';
+import { uiDesktopHeader } from '../../../styles';
+
+const styles = uiDesktopHeader;
 
 const Header = ({ search, sort }) => {
   return  <div style={styles.header}>
@@ -88,110 +89,6 @@ const Header = ({ search, sort }) => {
       </div>
     </div>
   </div>
-};
-
-const styles = {
-  main: {
-    '@media (min-width: 770px)': {
-      maxWidth: '750px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 960px)': {
-      maxWidth: '920px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 1366px)': {
-      maxWidth: '1040px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 1440px)': {
-      maxWidth: '1124px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 1600px)': {
-      maxWidth: '1400px',
-      margin: '0 auto',
-    },
-  },
-  header: {
-    '@media (max-width: 770px)': {
-      display: 'none'
-    }
-  },
-  topBar: {
-    background: '#031021',
-    padding: '10px 0 6px',
-  },
-  headerBar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  logo: {
-    width: '102px',
-    display: 'table',
-    margin: 'auto 0 auto 10px',
-  },
-  profile: {
-    display:'flex',
-    fontFamily: 'Ubuntu',
-    color: 'white',
-  },
-  profileName: {
-    margin: 'auto',
-    fontSize: '17px',
-  },
-  avatar: {
-    backgroundColor: 'none',
-    margin: 'auto',
-    width: '44px',
-  },
-  bottomBar: {
-    background: '#15335c',
-  },
-  bottomBarAside: {
-    display: 'flex',
-    position: 'relative',
-  },
-  bottomBarSearchHint: {
-    color: '#dce1e7',
-    bottom: '17px',
-  },
-  bottomBarSearchInput: {
-    color: 'white',
-  },
-  bottomBarSearchUnderline: {
-    borderColor: '#8a99ae',
-    bottom: '1px',
-  },
-  bottomBarSearch: {
-    position: 'absolute',
-    width: '150px',
-    left: '-133px',
-    bottom: '0',
-  },
-  bottomBarSort: {
-    display: 'flex',
-    fontFamily: 'Ubuntu',
-  },
-  bottomBarSortDescription: {
-    color: '#dce1e7',
-    margin: 'auto 15px auto 37px',
-  },
-  bottomBarSortValue: {
-    color: 'white',
-    fontSize: '17px',
-    margin: 'auto 0',
-  },
-  sortIcon: {
-    fill: '#4877f9',
-  },
-  bottomBarSortButton: {
-    width: 'auto',
-    margin: 'auto',
-  },
-  bottomBarSortLabel: {
-    color: 'white',
-  },
 };
 
 export default Radium(Header);

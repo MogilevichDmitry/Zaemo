@@ -1,5 +1,9 @@
 import React  from 'react';
 import Radium from 'radium';
+import { uiTabs } from '../../styles';
+
+const styles = uiTabs.styles;
+const stylesDesktop = uiTabs.stylesDesktop;
 
 const Tabs = ({ children, desktop }) => {
 
@@ -8,17 +12,6 @@ const Tabs = ({ children, desktop }) => {
   return <div style={style}>
     {children}
   </div>;
-};
-
-const styles = {
-  fontFamily: 'Ubuntu',
-  fontSize: '16px',
-  color: '#dce1e7',
-  width: '100%',
-};
-
-const stylesDesktop = {
-   width: 'auto',
 };
 
 export default Radium(Tabs);

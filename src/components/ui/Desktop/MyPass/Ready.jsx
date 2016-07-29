@@ -3,8 +3,10 @@ import Radium from 'radium';
 import ModalWindow from '../ModalWindow.jsx';
 import GymPass from './GymPass.jsx';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import gym from '../../../../images/content/gymMyPass.jpg';
+import { uiDesktopMyPassReady } from '../../../../styles';
+
+const styles = uiDesktopMyPassReady;
 
 const Ready = () => {
   return <ModalWindow title="New day pass" open={true}>
@@ -27,27 +29,6 @@ const Ready = () => {
       </div>
     </div>
   </ModalWindow>;
-};
-
-const styles = {
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  activate: {
-    fontSize: '13px',
-    color: '#999999',
-    margin: 'auto',
-    width: '350px',
-    textAlign: 'center',
-  },
-  activateDescription: {
-    marginBottom: '15px',
-  },
-  activateButton: {
-    width: '70%',
-  },
 };
 
 export default Radium(Ready);

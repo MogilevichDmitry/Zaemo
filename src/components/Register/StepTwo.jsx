@@ -5,8 +5,11 @@ import IconButton from 'material-ui/IconButton';
 import FlatButton from 'material-ui/FlatButton';
 import Checkbox from 'material-ui/Checkbox';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
+
+import { registerStepTwo } from '../../styles';
+
+const styles = registerStepTwo;
 
 const StepTwo = () => {
   return <div>
@@ -50,43 +53,6 @@ const StepTwo = () => {
       style={styles.button}
     />
   </div>;
-};
-
-const styles = {
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarButton: {
-    color: '#4877f9',
-  },
-  title: {
-    fontFamily: 'Ubuntu',
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-    marginBottom: '20px',
-  },
-  workoutPreferences: {
-    padding: '6% 4% 3% 6%',
-  },
-  description: {
-    fontFamily: 'Ubuntu',
-    color: '#999999',
-    fontSize: '14px',
-    marginBottom: '3.3%',
-  },
-  checkbox: {
-    margin: '2.5% 0',
-    fontWeight: '300',
-    fontSize: '14px',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-    marginRight: '10px',
-  },
-  button: {
-    width: '100%',
-  },
 };
 
 export default Radium(StepTwo);

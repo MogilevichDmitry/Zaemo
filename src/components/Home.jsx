@@ -11,16 +11,16 @@ import { List, ListItem } from 'material-ui/List';
 import { Link } from 'react-router';
 import Header from './ui/Desktop/Header.jsx';
 import Gym from './ui/Gym.jsx';
-
 import FilterListIcon from 'material-ui/svg-icons/content/filter-list';
 import SearchIcon from 'material-ui/svg-icons/action/search';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
-
-import mapBackground from '../images/layout/homeMapBg.jpg';
 import gymA from '../images/content/gymA.jpg';
 import gymABC from '../images/content/gymABC.jpg';
+import { home } from '../styles';
+
+const styles = home;
 
 class Home extends Component {
   constructor(props) {
@@ -250,159 +250,6 @@ class Home extends Component {
       </div>
     </div>;
   }
-};
-
-const styles = {
-  main: {
-    '@media (min-width: 770px)': {
-      maxWidth: '750px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 960px)': {
-      maxWidth: '920px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 1366px)': {
-      maxWidth: '1040px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 1440px)': {
-      maxWidth: '1124px',
-      margin: '0 auto',
-    },
-    '@media (min-width: 1600px)': {
-      maxWidth: '1400px',
-      margin: '0 auto',
-    },
-  },
-  home: {
-    background: '#f2f2f2',
-    '@media (min-width: 770px)': {
-      paddingBottom: '40px',
-    },
-    '@media (max-width: 770px)': {
-      background: 'white',
-    },
-  },
-  headerMobile: {
-    '@media (min-width: 770px)': {
-      display: 'none'
-    }
-  },
-  appBar: {
-    backgroundColor: '#162233',
-  },
-  appBarRightBox: {
-    display: 'flex',
-    width: '70px',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  appBarSearch: {
-    position: 'relative',
-    backgroundColor: '#fafafa',
-  },
-  appBarSearchClose: {
-    position: 'absolute',
-    top: '20px',
-    right: '24px',
-  },
-  appBarSearchInput: {
-    position: 'absolute',
-    left: '72px',
-    width: '45%',
-    fontWeight: '500',
-  },  
-  content: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  contentFilter: {
-    '@media (max-width: 770px)': {
-      display: 'none',
-    },
-    flex: '0.16',
-    alignSelf: 'baseline',
-    background: 'white',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-    padding: '16px 24px 0',
-  },
-  contentFilterBox: {
-    marginBottom: '30px',
-  },
-  filterFirstTitle: {
-    fontFamily: 'Ubuntu',
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-    margin: '0 0 16px 4px',
-  },
-  title: {
-    fontFamily: 'Ubuntu',
-    fontSize: '17px',
-    fontWeight: '500',
-    color: '#4d4d4d',
-    marginBottom: '25px',
-  },
-  radioButton: {
-    marginBottom: '13px',
-    fontSize: '13px',
-    fontWeight: '300',
-    color: '#666666',
-  },
-  radioIcon: {
-    fill: '#4877f9',
-    marginRight: '10px',
-  },
-  checkbox: {
-    marginBottom: '13px',
-    fontSize: '13px',
-    fontWeight: '300',
-  },
-  checkboxIcon: {
-    fill: '#4877f9',
-    marginRight: '10px',
-  },
-  filterField: {
-    width: '151px',
-    fontSize: '13px',
-    fontWeight: '500',
-  },
-  fieldLabel: {
-    fontSize: '16px',
-    color: 'rgba(153, 153, 153, 1)',
-    top: '28px',
-  },
-  underline: {
-    borderColor: 'rgba(72, 119, 249, 0.7)',
-  },
-  selectFieldIcon: {
-    fill: '#4877f9',
-  },
-  contentPasses: {
-    '@media (min-width: 770px)': {
-      flex: '0.83',
-    }
-  },
-  inputHintStyle: {
-    fontWeight: '400',
-  },
-  listLink: {
-    textDecoration: 'none',
-  },
-  listMainInfo: {
-    fontWeight: '500',
-  },
-  map: {
-    width: '100%',
-    height: '26vh',
-    backgroundImage: `url(${mapBackground})`,
-    backgroundSize: 'cover',
-    '@media (min-width: 770px)': {
-      height: '225px',
-      marginBottom: '10px',
-    },
-  },
 };
 
 export default Radium(Home);
