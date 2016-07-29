@@ -140,7 +140,6 @@ const styles = {
     display: 'flex',
     fontSize: '13px',
     color: '#666666',
-    fontWeight: '500',
   },
   zeamoIcon: {
     width: '14px',

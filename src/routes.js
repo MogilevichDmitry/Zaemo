@@ -27,26 +27,30 @@ import PurchaseCheckout from './components/Purchase/Checkout.jsx';
 export default () => {
   return <Route>
     <Route path="/" component={Home} />
+    <Route path="home" component={Home} />
     <Route path="login" component={Login} />
     <Route path="home-filter" component={HomeFilter} />
     <Route path="search-result" component={SearchResult} />
     <Route path="gym-detail" component={GymDetail} />
-    <Route path="my-passes" component={MyPasses} />
-    <Route path="pass-active" component={PassActive} />
-    <Route path="pass-ready" component={PassReady} />
-    <Route path="pass-expired" component={PassExpired} />
-    
-    <Route path="my-passes-mobile">
-      <IndexRoute component={PassActiveMobile} />
-      <Route path="ready" component={PassReadyMobile} />
-      <Route path="expired" component={PassExpiredMobile} />
+
+    <Route path="register">
+      <IndexRoute component={RegisterStepOne} />
+      <Route path="step-2" component={RegisterStepTwo} />
+      <Route path="step-3" component={RegisterStepThee} />
     </Route>
 
-    <Route path="settings">
-      <IndexRoute component={Settings} />
-      <Route path="workout" component={WorkoutPreferences} />
-      <Route path="payment" component={PaymentInfo} />
-      <Route path="personal" component={PersonalInfo} />
+    <Route path="my-passes">
+      <IndexRoute component={MyPasses} />
+      <Route path="active" component={PassActive} />
+      <Route path="ready" component={PassReady} />
+      <Route path="expired" component={PassExpired} />
+
+      <Route path="mobile">
+        <IndexRoute component={MyPasses} />
+        <Route path="active" component={PassActiveMobile} />
+        <Route path="ready" component={PassReadyMobile} />
+        <Route path="expired" component={PassExpiredMobile} />
+      </Route>
     </Route>
 
     <Route path="purchase">
@@ -55,10 +59,11 @@ export default () => {
       <Route path="checkout" component={PurchaseCheckout} />
     </Route>
 
-    <Route path="register">
-      <IndexRoute component={RegisterStepOne} />
-      <Route path="step-2" component={RegisterStepTwo} />
-      <Route path="step-3" component={RegisterStepThee} />
+    <Route path="settings">
+      <IndexRoute component={Settings} />
+      <Route path="workout" component={WorkoutPreferences} />
+      <Route path="payment" component={PaymentInfo} />
+      <Route path="personal" component={PersonalInfo} />
     </Route>
   </Route>
 }

@@ -65,7 +65,8 @@ const Header = ({ search, sort }) => {
               sort === false ?
                 '' :
                 <div style={styles.bottomBarSort}>
-                  <span style={styles.bottomBarSortDescription}>Sort by: Name: A-Z</span>
+                  <span style={styles.bottomBarSortDescription}>Sort by:</span>
+                  <span style={styles.bottomBarSortValue}>Name: A-Z</span>
                   <IconMenu
                     iconButtonElement={
                       <IconButton><ArrowDropDown color={'#4877f9'} /></IconButton>
@@ -174,7 +175,12 @@ const styles = {
   },
   bottomBarSortDescription: {
     color: '#dce1e7',
-    margin: 'auto 10px auto 37px',
+    margin: 'auto 15px auto 37px',
+  },
+  bottomBarSortValue: {
+    color: 'white',
+    fontSize: '17px',
+    margin: 'auto 0',
   },
   sortIcon: {
     fill: '#4877f9',

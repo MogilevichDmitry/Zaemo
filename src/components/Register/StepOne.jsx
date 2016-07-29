@@ -91,7 +91,7 @@ const styles = {
   },
   title: {
     fontFamily: 'Ubuntu',
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
     marginBottom: '6%',

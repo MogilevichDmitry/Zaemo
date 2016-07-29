@@ -98,7 +98,7 @@ const styles = {
   gymInfoBox: {
     display: 'flex',
     flex: '1',
-    padding: '2.5% 3% 1.5%',
+    padding: '2% 3% 1.8%',
     '@media (min-width: 770px)': {
       padding: '10px 15px',
     }
@@ -124,15 +124,12 @@ const styles = {
     marginBottom: '2%',
     color: '#031021',
     fontWeight: '500',
-    fontSize: '18px',
+    fontSize: '17px',
   },
   partner: {
-    fontSize: '14px',
-    marginBottom: '2%',
+    fontSize: '13px',
+    marginBottom: '6px',
     display: 'flex',
-    '@media (min-width: 770px)':{
-      marginBottom: '6px',
-    },
   },
   zeamoIcon: {
     width: '14px',
@@ -154,7 +151,7 @@ const styles = {
     },
   },
   costDescription: {
-    fontSize: '14px',
+    fontSize: '13px',
     fontWeight: '300',
 
     '@media (min-width: 770px)': {
@@ -172,7 +169,7 @@ const styles = {
     },
   },
   feedback: {
-    fontSize: '14px',
+    fontSize: '13px',
     '@media (max-width: 970px)': {
       display: 'none',
     },

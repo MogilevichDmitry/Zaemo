@@ -240,7 +240,7 @@ const styles = {
   },
   title: {
     fontFamily: 'Ubuntu',
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
     marginBottom: '3.5%',
@@ -248,7 +248,7 @@ const styles = {
   filter: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '6% 2% 0',
+    padding: '6% 10px 0',
   },
   filterMain: {
     flex: '1',
@@ -267,6 +267,7 @@ const styles = {
     width: 'auto',
     fontWeight: '300',
     color: '#666666',
+    fontSize: '13px',
   },
   radioIcon: {
     fill: '#4877f9',
@@ -274,7 +275,7 @@ const styles = {
   },
   areaTitle: {
     fontFamily: 'Ubuntu',
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
   },
@@ -286,6 +287,8 @@ const styles = {
   },
   areaRadius: {
     width: '45%',
+    fontSize: '13px',
+    fontWeight: '500',
   },
   address: {
     display: 'flex',
@@ -293,12 +296,18 @@ const styles = {
   },
   areaZipcode: {
     flex: '0.45',
+    fontSize: '13px',
+    fontWeight: '500',
   },
   areaState: {
     flex: '0.45',
+    fontSize: '13px',
+    fontWeight: '500',
   },
   fieldLabel: {
+    fontSize: '16px',
     color: 'rgba(153, 153, 153, 1)',
+    top: '28px',
   },
   underline: {
     borderColor: 'rgba(72, 119, 249, 0.7)',
@@ -307,7 +316,7 @@ const styles = {
     fill: '#4877f9',
   },
   tabTitle: {
-    fontSize: '18px',
+    fontSize: '17px',
     fontWeight: '500',
     color: '#4d4d4d',
     textTransform: 'capitalize',
@@ -322,6 +331,7 @@ const styles = {
     width: 'auto',
     minWidth: '186px',
     fontWeight: '300',
+    fontSize: '13px',
   },
   checkboxIcon: {
     fill: '#4877f9',
