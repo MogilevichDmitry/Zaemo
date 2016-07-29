@@ -3,18 +3,25 @@ import Radium from 'radium';
 import Checkbox from 'material-ui/Checkbox';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import IconButton from 'material-ui/IconButton';
 import Header from './../ui/Desktop/Header.jsx';
 import AppBar from 'material-ui/AppBar';
 import { Link } from 'react-router';
+
+import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 
 const Settings = () => {
   return <div style={styles.wrapper}>
     <Header search={false} sort={false} />
 
     <div style={styles.onlyMobile}>
-      <AppBar title="Settings" />
+      <AppBar
+        title="Settings"
+        style={styles.appBar}
+        iconElementLeft={<IconButton><MenuIcon color={'#4877f9'} /></IconButton>}
+        iconStyleLeft={styles.appBarLeftIcon}
+      />
     </div>
-
 
     <div style={styles.main}>
       <div style={styles.content}>
@@ -55,15 +62,14 @@ const Settings = () => {
               <div style={styles.boxRow}>
                 <TextField
                   floatingLabelText="Name"
-                  style={styles.fieldName}
                   underlineStyle={styles.underline}
+                  style={styles.fieldName}
                 />
                 <TextField
                   defaultValue="(555)555-5555"
                   floatingLabelText="Phone Number"
-                  floatingLabelFixed={true}
-                  style={styles.fieldPhone}
                   underlineStyle={styles.underline}
+                  style={styles.fieldPhone}
                 />
               </div>
 
@@ -71,17 +77,15 @@ const Settings = () => {
                 <TextField
                   defaultValue="frank.hill@gmail.com"
                   floatingLabelText="Email"
-                  floatingLabelFixed={true}
-                  style={styles.fieldEmail}
                   underlineStyle={styles.underline}
+                  style={styles.fieldEmail}
                 />
                 <TextField
                   type="password"
                   defaultValue="1111111111111111111111"
                   floatingLabelText="Password"
-                  floatingLabelFixed={true}
-                  style={styles.fieldPassword}
                   underlineStyle={styles.underline}
+                  style={styles.fieldPassword}
                 />
               </div>
             </div>
@@ -95,140 +99,154 @@ const Settings = () => {
                 <TextField
                   defaultValue="John Smith"
                   floatingLabelText="Name"
-                  floatingLabelFixed={true}
-                  style={styles.fieldName}
                   underlineStyle={styles.underline}
+                  style={styles.fieldName}
                 />
 
                 <TextField
                   defaultValue="06/18"
                   floatingLabelText="Exp. date"
-                  floatingLabelFixed={true}
-                  style={styles.fieldDate}
                   underlineStyle={styles.underline}
+                  style={styles.fieldDate}
                 />
               </div>
 
-              <div style={styles.boxRow}>
-                <div style={styles.cardInformation}>
-                  <TextField
-                    defaultValue="1232344345456"
-                    floatingLabelText="Card Number"
-                    floatingLabelFixed={true}
-                    style={styles.fieldCardNumber}
-                    underlineStyle={styles.underline}
-                  />
+              <div style={styles.cardInformation}>
+                <TextField
+                  defaultValue="1232344345456"
+                  floatingLabelText="Card Number"
+                  underlineStyle={styles.underline}
+                  style={styles.fieldCardNumber}
+                />
 
-                  <TextField
-                    defaultValue="06/18"
-                    floatingLabelText="cvv"
-                    floatingLabelFixed={true}
-                    style={styles.fieldCvv}
-                    underlineStyle={styles.underline}
-                  />
-                </div>
+                <TextField
+                  defaultValue="06/18"
+                  floatingLabelText="cvv"
+                  underlineStyle={styles.underline}
+                  style={styles.fieldCvv}
+                />
               </div>
 
             </div>
           </div>
 
-          <RaisedButton label="save changes" primary={true} fullWidth={true} />
+          <div style={styles.buttonBox}>
+            <RaisedButton
+              label="save changes"
+              primary={true}
+              fullWidth={true}
+            />
+          </div>
         </div>
 
         <div style={styles.onlyMobile}>
-          <div>
+          <Link to="/settings/workout" style={styles.link}>
+            <div style={styles.settingsBox}>
+              <h1 style={styles.title}>Edit your workout preferences</h1>
+              <div>Gym, swimming, yoga, spinning, pilates...</div>
+            </div>
+          </Link>
 
-            <Link to="/settings/workout">
-              <div>
-                <h1>Edit your workout preferences</h1>
-                <div>Gym, swimming, yoga, spinning, pilates...</div>
-              </div>
-            </Link>
+          <Link to="/settings/personal" style={styles.link}>
+            <div style={styles.settingsBox}>
+              <h1 style={styles.title}>Edit your personal information</h1>
+              <div>Name, email, phone number...</div>
+            </div>
+          </Link>
 
-            <Link to="/settings/personal">
-              <div>
-                <h1>Edit your personal information</h1>
-                <div>Name, email, phone number...</div>
-              </div>
-            </Link>
-
-            <Link to="/settings/payment">
-              <div>
-                <h1>Edit your payment information</h1>
-                <div>Card number *******5555</div>
-              </div>
-            </Link>
-          </div>
+          <Link to="/settings/payment" style={styles.link}>
+            <div style={styles.settingsBoxLast}>
+              <h1 style={styles.title}>Edit your payment information</h1>
+              <div>Card number *******5555</div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
   </div>;
-}
+};
 
 const styles = {
   wrapper: {
-    background: '#f2f2f2',
     fontFamily: 'Ubuntu',
     color: 'black',
+    paddingBottom: '45px',
+    '@media (min-width: 770px)': {
+      background: '#f2f2f2',
+    },
+  },
+  main: {
+    margin: '0 auto',
+    '@media (min-width: 770px)': {
+      maxWidth: '700px',
+      textAlign: 'center',
+    },
+    '@media (min-width: 960px)': {
+      maxWidth: '820px',
+    },
   },
   onlyMobile: {
     '@media (min-width: 770px)': {
       display: 'none',
     },
   },
-  main: {
-    textAlign: 'center',
-    margin: '0 auto',
-    '@media (min-width: 770px)': {
-      maxWidth: '750px',
-    },
-    '@media (min-width: 960px)': {
-      maxWidth: '920px',
-    },
-    '@media (min-width: 1366px)': {
-      maxWidth: '1040px',
-    },
-    '@media (min-width: 1440px)': {
-      maxWidth: '1124px',
-    },
-    '@media (min-width: 1600px)': {
-      maxWidth: '1400px',
-    },
-  },
-  content: {
-    marginTop: '40px',
-    marginBottom: '40px',
-  },
   onlyDesktop: {
     '@media (max-width: 770px)': {
       display: 'none',
     }
   },
+  appBar: {
+    background: '#162233',
+  },
+  content: {
+    '@media (max-width: 770px)': {
+      padding: '15px 2.5% 0',
+    },
+    '@media (min-width: 770px)': {
+      marginTop: '40px',
+    },
+  },
   heading: {
+    fontSize: '17px',
+    fontWeight: '500',
     marginBottom: '15px',
     textAlign: 'center',
-    fontSize: '17px',
   },
   settingsBox: {
-    boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-    background: '#ffffff',
-    marginBottom: '30px',
-    padding: '25px',
+    '@media (max-width: 770px)': {
+      padding: '4% 4.5%',
+      borderBottom: '1px solid #d9d9d9',
+    },
+    '@media (min-width: 770px)': {
+      background: 'white',
+      boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+      marginBottom: '15px',
+      padding: '20px 35px 35px',
+    },
+  },
+  settingsBoxLast: {
+    padding: '4% 4.5%',
   },
   title: {
     fontSize: '17px',
+    fontWeight: '500',
+    marginBottom: '30px',
+    '@media (max-width: 770px)': {
+      color: '#4d4d4d',
+      marginBottom: '10px',
+    },
   },
   checkboxGroup: {
-    display: 'inline-block',
-    marginTop: '3%',
+    display: 'flex',
+    flexWrap: 'wrap',
   },
   checkbox: {
-    display: 'inline-block',
     textAlign: 'left',
-    marginBottom: '2%',
+    marginBottom: '14px',
     width: 'auto',
     minWidth: '186px',
     fontWeight: '300',
+    fontSize: '13px',
   },
   checkboxIcon: {
     fill: '#4877f9',
@@ -241,36 +259,50 @@ const styles = {
   boxRow: {
     display: 'flex',
     justifyContent: 'space-between',
-  },
-  cardInformation: {
-    display: 'block',
-    flex: '0.5',
-    justifyContent: 'space-between',
+    marginBottom: '5px',
   },
   underline: {
     borderColor: 'rgba(72, 119, 249, 0.7)',
   },
   fieldName: {
-    flex: '0.7',
+    flex: '0.72',
+    fontSize: '14px',
   },
   fieldPhone: {
-    flex: '0.25',
+    flex: '0.24',
+    fontSize: '14px',
   },
   fieldEmail: {
-    flex: '0.45',
+    flex: '0.47',
+    fontSize: '14px',
   },
   fieldPassword: {
-    flex: '0.45',
+    flex: '0.47',
+    fontSize: '14px',
   },
   fieldDate: {
-    flex: '0.25',
+    flex: '0.24',
+    fontSize: '14px',
+  },
+  cardInformation: {
+    display: 'flex',
   },
   fieldCardNumber: {
-    flex: '0.7',
+    flex: '0.25',
+    fontSize: '14px',
+    marginRight: '20px',
   },
   fieldCvv: {
-    flex: '0.25',
-  }
+    flex: '0.12',
+    fontSize: '14px',
+  },
+  buttonBox: {
+    marginTop: '30px',
+  },
+  link: {
+    textDecoration: 'none',
+    color: '#666666'
+  },
 };
 
 export default Radium(Settings);
