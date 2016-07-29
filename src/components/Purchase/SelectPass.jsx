@@ -14,12 +14,12 @@ import background from '../../images/layout/myPassesBg.jpg';
 const SelectPass = () => {
   return <div style={styles.wrapper}>
     <AppBar
-    title="Select a pass"
-    iconElementLeft={<IconButton><NavigationClose color={'#4877f9'} /></IconButton>}
-    iconElementRight={<p style={styles.appBarLeftInfo}>Step 1 of 3 </p>}
-    zDepth={0}
-    iconStyleRight={styles.appBarRightIcon}
-    style={styles.appBar}
+      title="Select a pass"
+      iconElementLeft={<IconButton><NavigationClose color={'#4877f9'} /></IconButton>}
+      iconElementRight={<p style={styles.appBarLeftInfo}>Step 1 of 3 </p>}
+      zDepth={0}
+      iconStyleRight={styles.appBarRightIcon}
+      style={styles.appBar}
     />
     <div style={styles.main}>
       <SelectField
