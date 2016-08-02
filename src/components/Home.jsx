@@ -19,6 +19,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import gymA from '../images/content/gymA.jpg';
 import gymABC from '../images/content/gymABC.jpg';
 import { home } from '../styles';
+import GoogleMap from './GoogleMap.jsx';
 
 const styles = home;
 
@@ -240,7 +241,8 @@ class Home extends Component {
             </div>
           </div>
           <div style={styles.contentPasses}>
-            <div style={styles.map}></div>
+
+            <div style={styles.map}><GoogleMap /></div>
 
             <Gym src={gymA} title="Gym A" dayPass="$15.00" />
             <Gym src={gymABC} title="Gym ABCDCD" dayPass="$15.00" />

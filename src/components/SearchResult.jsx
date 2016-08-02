@@ -10,6 +10,7 @@ import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import gymA from '../images/content/gymA.jpg';
 import gymABC from '../images/content/gymABC.jpg';
 import { searchResult } from '../styles';
+import GoogleMap from './GoogleMap.jsx';
 
 const styles = searchResult;
 
@@ -26,7 +27,7 @@ const SearchResult = () => {
       iconElementRight={<IconButton><FilterListIcon color={'#4877f9'} /></IconButton>}
     />
 
-    <div style={styles.map}></div>
+    <div style={styles.map}><GoogleMap /></div>
 
     <Gym src={gymA} title="Pilates" dayPass="$15.00" />
     <Gym src={gymABC} title="Pilates" dayPass="$15.00" />

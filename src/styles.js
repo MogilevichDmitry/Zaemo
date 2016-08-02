@@ -5,7 +5,6 @@ import purchaseSelectPassBg from './images/layout/myPassesBg.jpg';
 import uiMobileMyPassAtiveBg from './images/layout/myPassesBg.jpg';
 import uiMobileMyPassExpiredBg from './images/layout/myPassesBg.jpg';
 import uiMobileMyPassReadyBg from './images/layout/myPassesBg.jpg';
-import homeMapBg from './images/layout/homeMapBg.jpg';
 import loginBgMobile from './images/layout/loginBgMobile.jpg';
 import loginBgDesktop from './images/layout/loginDesktopBg.jpg';
 
@@ -1563,6 +1562,11 @@ export const gymDetail = {
   },
   map: {
     width: '100%',
+    height: '240px',
+    '@media (min-width: 770px)': {
+      height: '320px',
+      marginBottom: '10px',
+    },
   },
   detailBox: {
     '@media (min-width: 770px)': {
@@ -1852,11 +1856,9 @@ export const home = {
   },
   map: {
     width: '100%',
-    height: '26vh',
-    backgroundImage: `url(${homeMapBg})`,
-    backgroundSize: 'cover',
+    height: '240px',
     '@media (min-width: 770px)': {
-      height: '225px',
+      height: '320px',
       marginBottom: '10px',
     },
   },
@@ -2137,9 +2139,7 @@ export const searchResult = {
   },
   map: {
     width: '100%',
-    height: '26vh',
-    backgroundImage: `url(${homeMapBg})`,
-    backgroundSize: 'cover',
+    height: '400px',
   },
   gym: {
     fontFamily: 'Ubuntu',

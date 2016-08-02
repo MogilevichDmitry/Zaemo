@@ -16,6 +16,7 @@ import gymSlider from '../images/content/gymSlider.jpg';
 import gymImage from '../images/content/gymDetail.jpg';
 import gymMap from '../images/content/gymMap.jpg';
 import { gymDetail } from '../styles';
+import GoogleMap from './GoogleMap.jsx';
 
 const styles = gymDetail;
 
@@ -77,7 +78,7 @@ class GymDetail extends Component {
                 </div>
 
                 <div style={styles.mapBox}>
-                  <img src={gymMap} style={styles.map} />
+                  <div style={styles.map}><GoogleMap /></div>
                 </div>
 
                 <div style={styles.onlyMobile}>
